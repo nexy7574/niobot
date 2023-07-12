@@ -465,6 +465,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.exceptions.MediaCodecWarning" class="md-nav__link">
+    MediaCodecWarning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.MetadataDetectionException" class="md-nav__link">
+    MetadataDetectionException
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#niobot.exceptions.CommandError" class="md-nav__link">
     CommandError
   </a>
@@ -707,6 +721,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.exceptions.MediaCodecWarning" class="md-nav__link">
+    MediaCodecWarning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.MetadataDetectionException" class="md-nav__link">
+    MetadataDetectionException
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#niobot.exceptions.CommandError" class="md-nav__link">
     CommandError
   </a>
@@ -820,7 +848,7 @@ always available:</p>
         <tr>
           <td><code>response</code></td>
           <td>
-                <code>nio.<span title="nio.ErrorResponse">ErrorResponse</span> | None</code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -831,7 +859,7 @@ always available:</p>
         <tr>
           <td><code>exception</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[nio.<span title="nio.ErrorResponse">ErrorResponse</span>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a>]</code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -842,7 +870,7 @@ always available:</p>
         <tr>
           <td><code>original</code></td>
           <td>
-                <code>nio.<span title="nio.ErrorResponse">ErrorResponse</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a> | None</code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -980,6 +1008,78 @@ always available:</p>
 
   
       <p>Exception for media-uploading related errors</p>
+
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.MediaCodecWarning" class="doc doc-heading">
+        <span class="doc doc-object-name doc-class-name">MediaCodecWarning</span>
+
+
+<a href="#niobot.exceptions.MediaCodecWarning" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#ResourceWarning">ResourceWarning</a></code></p>
+
+  
+      <p>Warning that is dispatched when a media file is not in a supported codec.</p>
+<p>You can filter this warning by using <code>warnings.filterwarnings("ignore", category=niobot.MediaCodecWarning)</code></p>
+<p>Often times, matrix clients are web-based, so they're limited to what the browser can display.
+This is usually:</p>
+<ul>
+<li>h264/vp8/vp9/av1/theora video</li>
+<li>aac/opus/vorbis/mp3/pcm_* audio</li>
+<li>jpg/png/webp/avif/gif images</li>
+</ul>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.MetadataDetectionException" class="doc doc-heading">
+        <span class="doc doc-object-name doc-class-name">MetadataDetectionException</span>
+
+
+<a href="#niobot.exceptions.MetadataDetectionException" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.MediaUploadException" href="#niobot.exceptions.MediaUploadException">MediaUploadException</a></code></p>
+
+  
+      <p>Exception raised when metadata detection fails. Most of the time, this is an ffmpeg-related error</p>
 
 
 

@@ -417,6 +417,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#niobot.commands.Command.display_usage" class="md-nav__link">
+    display_usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.commands.Command.autodetect_args" class="md-nav__link">
+    autodetect_args()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.commands.Command.__eq__" class="md-nav__link">
     __eq__()
   </a>
@@ -699,6 +713,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#niobot.commands.Command.display_usage" class="md-nav__link">
+    display_usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.commands.Command.autodetect_args" class="md-nav__link">
+    autodetect_args()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.commands.Command.__eq__" class="md-nav__link">
     __eq__()
   </a>
@@ -977,9 +1005,11 @@
 <summary>Example</summary>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This example uses the <code>command</code> decorator, but you can also use the <code>Command</code> class directly, but you
+<p>This example uses the <code>command</code> decorator, but you can also use the <a class="autorefs autorefs-internal" href="#niobot.commands.Command"><code>Command</code></a>
+class directly, but you
 likely won't need to, unless you want to pass a custom command class.</p>
-<p>All that the <code>@command</code> decorator does is create a <code>Command</code> instance and add it to the bot's commands,
+<p>All that the <code>@command</code> decorator does is create a <a class="autorefs autorefs-internal" href="#niobot.commands.Command"><code>Command</code></a> instance and
+add it to the bot's commands,
 while wrapping the function its decorating.</p>
 </div>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">niobot</span> <span class="kn">import</span> <span class="n">NioBot</span><span class="p">,</span> <span class="n">command</span>
@@ -1081,7 +1111,7 @@ while wrapping the function its decorating.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A list of <a href="#niobot.commands.Command--Argument"><code>Argument</code></a> instances. Will be used to parse the arguments given to the command. <code>ctx</code> is always the first argument, regardless of what you put here.</p>
+              <p>A list of <a class="autorefs autorefs-internal" href="#niobot.commands.Argument"><code>Argument</code></a> instances. Will be used to parse the arguments given to the command. <code>ctx</code> is always the first argument, regardless of what you put here.</p>
             </div>
           </td>
           <td>
@@ -1094,7 +1124,7 @@ while wrapping the function its decorating.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A string representing how to use this command's arguments. Will be shown in the auto-generated help. Do not include the command name or your bot's prefix here, only arguments.</p>
+              <p>A string representing how to use this command's arguments. Will be shown in the auto-generated help. Do not include the command name or your bot's prefix here, only arguments. For example: <code>usage="&lt;message&gt; [times]"</code> will show up as <code>[p][command] &lt;message&gt; [times]</code> in the help command.</p>
             </div>
           </td>
           <td>
@@ -1116,7 +1146,103 @@ while wrapping the function its decorating.</p>
 
 
 
+<div class="doc doc-object doc-attribute">
 
+
+
+<h4 id="niobot.commands.Command.display_usage" class="doc doc-heading">
+        <span class="doc doc-object-name doc-attribute-name">display_usage</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#niobot.commands.Command.display_usage" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">display_usage</span><span class="p">:</span> <span class="nb">str</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the usage string for this command, auto-resolved if not pre-defined</p>
+  </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="niobot.commands.Command.autodetect_args" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">autodetect_args</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#niobot.commands.Command.autodetect_args" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">autodetect_args</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Argument</span><span class="p">]</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Attempts to auto-detect the arguments for the command, based on the callback's signature</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>callback</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The function to inspect</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-internal" title="niobot.commands.Argument" href="#niobot.commands.Argument">Argument</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A list of arguments. <code>self</code>, and <code>ctx</code> are skipped.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 

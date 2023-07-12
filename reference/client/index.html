@@ -509,6 +509,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.generate_mx_reply" class="md-nav__link">
+    generate_mx_reply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.client.NioBot.send_message" class="md-nav__link">
     send_message()
   </a>
@@ -525,6 +532,20 @@
           <li class="md-nav__item">
   <a href="#niobot.client.NioBot.delete_message" class="md-nav__link">
     delete_message()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.add_reaction" class="md-nav__link">
+    add_reaction()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.redact_reaction" class="md-nav__link">
+    redact_reaction()
   </a>
   
 </li>
@@ -891,6 +912,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.generate_mx_reply" class="md-nav__link">
+    generate_mx_reply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.client.NioBot.send_message" class="md-nav__link">
     send_message()
   </a>
@@ -907,6 +935,20 @@
           <li class="md-nav__item">
   <a href="#niobot.client.NioBot.delete_message" class="md-nav__link">
     delete_message()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.add_reaction" class="md-nav__link">
+    add_reaction()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.redact_reaction" class="md-nav__link">
+    redact_reaction()
   </a>
   
 </li>
@@ -1084,7 +1126,6 @@
         <tr>
           <td><code>global_message_type</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1092,13 +1133,12 @@
             </div>
           </td>
           <td>
-                <code>&#39;m.notice&#39;</code>
+              <em>required</em>
           </td>
         </tr>
         <tr>
           <td><code>ignore_old_events</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1106,7 +1146,33 @@
             </div>
           </td>
           <td>
-                <code>True</code>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>auto_join_rooms</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to automatically join rooms the bot is invited to.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>automatic_markdown_renderer</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to automatically render markdown in messages when sending/editing.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
         <tr>
@@ -1165,6 +1231,7 @@
 <p class="admonition-title">Note</p>
 <p>Aliases of commands are treated as their own command instance. You will see the same command show up as a
 value multiple times if it has aliases.</p>
+<p>You can check if two commands are identical by comparing them (<code>command1instance == command2instance</code>)</p>
 </div>
   </div>
 
@@ -1235,7 +1302,7 @@ value multiple times if it has aliases.</p>
         <tr>
           <td><code>event</code></td>
           <td>
-                <code>nio.<span title="nio.Event">Event</span></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.Event" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.Event">Event</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1836,6 +1903,32 @@ Otherwise, it returns None.</p>
 
 
 
+<h4 id="niobot.client.NioBot.generate_mx_reply" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">generate_mx_reply</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#niobot.client.NioBot.generate_mx_reply" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">generate_mx_reply</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessageText</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Generates a reply string for a given event.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
 <h4 id="niobot.client.NioBot.send_message" class="doc doc-heading">
         <span class="doc doc-object-name doc-function-name">send_message</span>
 
@@ -1848,7 +1941,7 @@ Otherwise, it returns None.</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">send_message</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">file</span><span class="p">:</span> <span class="n">MediaAttachment</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">file</span><span class="p">:</span> <span class="n">BaseAttachment</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">reply_to</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessageText</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">message_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomSendResponse</span>
@@ -1872,7 +1965,7 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>room</code></td>
           <td>
-                <code>nio.<span title="nio.MatrixRoom">MatrixRoom</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1900,7 +1993,7 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>file</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.attachment.MediaAttachment" href="../attachment/#niobot.attachment.MediaAttachment">MediaAttachment</a></code>
+                <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="../attachment/#niobot.attachment.BaseAttachment">BaseAttachment</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1914,7 +2007,7 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>reply_to</code></td>
           <td>
-                <code>nio.<span title="nio.RoomMessageText">RoomMessageText</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.RoomMessageText" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.RoomMessageText">RoomMessageText</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1953,7 +2046,7 @@ Otherwise, it returns None.</p>
     <tbody>
         <tr>
           <td>
-                <code>nio.<span title="nio.RoomSendResponse">RoomSendResponse</span></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.RoomSendResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.RoomSendResponse">RoomSendResponse</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2015,7 +2108,7 @@ Otherwise, it returns None.</p>
 <a href="#niobot.client.NioBot.edit_message" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">edit_message</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">event_id</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">Event</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">message</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">Event</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="o">*</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">message_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2041,7 +2134,7 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>room</code></td>
           <td>
-                <code>nio.<span title="nio.MatrixRoom">MatrixRoom</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2053,9 +2146,9 @@ Otherwise, it returns None.</p>
           </td>
         </tr>
         <tr>
-          <td><code>event_id</code></td>
+          <td><code>message</code></td>
           <td>
-                <code>nio.<span title="nio.Event">Event</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.Event" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.Event">Event</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2171,7 +2264,7 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>room</code></td>
           <td>
-                <code>nio.<span title="nio.MatrixRoom">MatrixRoom</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2185,7 +2278,7 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>message_id</code></td>
           <td>
-                <code>nio.<span title="nio.RoomMessage">RoomMessage</span> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.RoomMessage" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.RoomMessage">RoomMessage</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2232,8 +2325,173 @@ Otherwise, it returns None.</p>
             </div>
           </td>
         </tr>
+        <tr>
+          <td>
+                <code>MessageException</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the message fails to delete.</p>
+            </div>
+          </td>
+        </tr>
     </tbody>
   </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="niobot.client.NioBot.add_reaction" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">add_reaction</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#niobot.client.NioBot.add_reaction" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">add_reaction</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">message</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessage</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">emoji</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomSendResponse</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Adds an emoji "reaction" to a message.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>room</code></td>
+          <td>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The room the message is in.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>message</code></td>
+          <td>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.RoomMessage" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.RoomMessage">RoomMessage</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The event ID or message object to react to.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>emoji</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The emoji to react with (e.g. <code>❌</code> = ❌)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.RoomSendResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.RoomSendResponse">RoomSendResponse</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The response from the server.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>MessageException</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the message fails to react.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="niobot.client.NioBot.redact_reaction" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">redact_reaction</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#niobot.client.NioBot.redact_reaction" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">redact_reaction</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">reaction</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomSendResponse</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Alias for NioBot.delete_message, but more appropriately named for reactions.</p>
 
   </div>
 
