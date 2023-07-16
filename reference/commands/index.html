@@ -498,6 +498,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.commands.check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#niobot.commands.event" class="md-nav__link">
     event()
   </a>
@@ -794,6 +801,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.commands.check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#niobot.commands.event" class="md-nav__link">
     event()
   </a>
@@ -844,7 +858,7 @@
 
 
 <h3 id="niobot.commands.Argument" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">Argument</span>
+          <span class="doc doc-object-name doc-class-name">Argument</span>
 
 
 <a href="#niobot.commands.Argument" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -867,6 +881,8 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -932,7 +948,7 @@
             </div>
           </td>
           <td>
-                <code>Ellipsis</code>
+                <code>...</code>
           </td>
         </tr>
         <tr>
@@ -946,12 +962,11 @@
             </div>
           </td>
           <td>
-                <code>Ellipsis</code>
+                <code>...</code>
           </td>
         </tr>
     </tbody>
   </table>
-
 
 
   
@@ -966,12 +981,13 @@
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.commands.Argument.internal_parser" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">internal_parser</span>
+          <span class="doc doc-object-name doc-function-name">internal_parser</span>
 
   
   <span class="doc doc-labels">
@@ -1005,7 +1021,7 @@
 
 
 <h3 id="niobot.commands.Command" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">Command</span>
+          <span class="doc doc-object-name doc-class-name">Command</span>
 
 
 <a href="#niobot.commands.Command" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -1037,6 +1053,8 @@ while wrapping the function its decorating.</p>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1145,9 +1163,22 @@ while wrapping the function its decorating.</p>
               <em>required</em>
           </td>
         </tr>
+        <tr>
+          <td><code>hidden</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether the command is hidden or not. If hidden, the command will be always hidden on the auto-generated help.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
     </tbody>
   </table>
-
 
 
   
@@ -1165,7 +1196,7 @@ while wrapping the function its decorating.</p>
 
 
 <h4 id="niobot.commands.Command.display_usage" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">display_usage</span>
+          <span class="doc doc-object-name doc-attribute-name">display_usage</span>
 
   
   <span class="doc doc-labels">
@@ -1185,12 +1216,13 @@ while wrapping the function its decorating.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.commands.Command.autodetect_args" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">autodetect_args</span>
+          <span class="doc doc-object-name doc-function-name">autodetect_args</span>
 
   
   <span class="doc doc-labels">
@@ -1204,6 +1236,8 @@ while wrapping the function its decorating.</p>
   <div class="doc doc-contents ">
   
       <p>Attempts to auto-detect the arguments for the command, based on the callback's signature</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1232,6 +1266,8 @@ while wrapping the function its decorating.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1258,12 +1294,13 @@ while wrapping the function its decorating.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.commands.Command.__eq__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__eq__</span>
+          <span class="doc doc-object-name doc-function-name">__eq__</span>
 
 
 <a href="#niobot.commands.Command.__eq__" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1278,21 +1315,90 @@ while wrapping the function its decorating.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.commands.Command.invoke" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">invoke</span>
+          <span class="doc doc-object-name doc-function-name">invoke</span>
 
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
 
 <a href="#niobot.commands.Command.invoke" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">invoke</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">invoke</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Coroutine</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
       <p>Invokes the current command with the given context</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ctx</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current context</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>CommandArgumentsError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Too many/few arguments, or an error parsing an argument.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>CheckFailure</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A check failed</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 
@@ -1311,14 +1417,13 @@ while wrapping the function its decorating.</p>
 
 
 <h3 id="niobot.commands.Module" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">Module</span>
+          <span class="doc doc-object-name doc-class-name">Module</span>
 
 
 <a href="#niobot.commands.Module" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-
 
 
 
@@ -1334,12 +1439,13 @@ while wrapping the function its decorating.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.commands.Module.__setup__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__setup__</span>
+          <span class="doc doc-object-name doc-function-name">__setup__</span>
 
 
 <a href="#niobot.commands.Module.__setup__" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1354,12 +1460,13 @@ while wrapping the function its decorating.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.commands.Module.__teardown__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__teardown__</span>
+          <span class="doc doc-object-name doc-function-name">__teardown__</span>
 
 
 <a href="#niobot.commands.Module.__teardown__" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1383,12 +1490,13 @@ while wrapping the function its decorating.</p>
 </div>
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.commands.command" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">command</span>
+          <span class="doc doc-object-name doc-function-name">command</span>
 
 
 <a href="#niobot.commands.command" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -1400,6 +1508,8 @@ while wrapping the function its decorating.</p>
       <p>Allows you to register commands later on, by loading modules.</p>
 <p>This differs from NioBot.command() in that commands are not automatically added, you need to load them with
 bot.mount_module</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1442,6 +1552,8 @@ bot.mount_module</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1468,12 +1580,55 @@ bot.mount_module</p>
 
 </div>
 
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot.commands.check" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">check</span>
+
+
+<a href="#niobot.commands.check" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">check</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">function</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="p">[</span><span class="n">Context</span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            <span class="nb">bool</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Coroutine</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">callable</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <div class="language-text highlight"><pre><span></span><code>Allows you to register checks in modules.
+
+```python
+@niobot.command()
+@niobot.check(my_check_func, name=&quot;My Check&quot;)
+async def my_command(ctx: niobot.Context):
+    pass
+```
+
+:param function: The function to register as a check
+:param name: A human-readable name for the check. Defaults to function.__name__
+:return: The decorated function.
+</code></pre></div>
+<p>=</p>
+
+  </div>
+
+</div>
+
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.commands.event" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">event</span>
+          <span class="doc doc-object-name doc-function-name">event</span>
 
 
 <a href="#niobot.commands.event" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -1483,6 +1638,8 @@ bot.mount_module</p>
   <div class="doc doc-contents ">
   
       <p>Allows you to register event listeners in modules.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1511,6 +1668,8 @@ bot.mount_module</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <p><strong>Returns:</strong></p>
   <table>

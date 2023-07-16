@@ -530,6 +530,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.room_parser" class="md-nav__link">
+    room_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.event_parser" class="md-nav__link">
+    event_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-parsers" class="md-nav__link">
     Creating Parsers
   </a>
@@ -662,6 +676,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.room_parser" class="md-nav__link">
+    room_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.event_parser" class="md-nav__link">
+    event_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-parsers" class="md-nav__link">
     Creating Parsers
   </a>
@@ -738,12 +766,13 @@ For example:</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.boolean_parser" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">boolean_parser</span>
+          <span class="doc doc-object-name doc-function-name">boolean_parser</span>
 
 
 <a href="#niobot.utils.parsers.boolean_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -754,65 +783,12 @@ For example:</p>
   
       <p>Converts a given string into a boolean. Value is lower-cased before being parsed.</p>
 <p>The following resolves to true:
-    1, y, yes, true, on</p>
+* 1, y, yes, true, on</p>
 <p>The following resolves to false:
-    0, n, no, false, off</p>
+* 0, n, no, false, off</p>
 <p>The following will raise a command argument error: anything else</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>_</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../../context/#niobot.context.Context">Context</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Value is unused</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>__</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Value is unused</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The value to parse</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -840,12 +816,13 @@ For example:</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.float_parser" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">float_parser</span>
+          <span class="doc doc-object-name doc-function-name">float_parser</span>
 
 
 <a href="#niobot.utils.parsers.float_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -856,61 +833,7 @@ For example:</p>
   
       <p>Converts a given string into a floating point number.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>_</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../../context/#niobot.context.Context">Context</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Value is unused</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>__</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.commands.Argument" href="../../commands/#niobot.commands.Argument">Argument</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Value is unused</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The value to parse</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -934,6 +857,8 @@ For example:</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Raises:</strong></p>
   <table>
     <thead>
@@ -945,7 +870,7 @@ For example:</p>
     <tbody>
         <tr>
           <td>
-                <code>CommandArgumentsError</code>
+                <code>CommandParserError</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -960,12 +885,13 @@ For example:</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.integer_parser" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">integer_parser</span>
+          <span class="doc doc-object-name doc-function-name">integer_parser</span>
 
 
 <a href="#niobot.utils.parsers.integer_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -979,6 +905,8 @@ For example:</p>
   <div class="doc doc-contents ">
   
       <p>Converts a given value into an integer, or a float if allowed.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1022,6 +950,8 @@ For example:</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1044,6 +974,8 @@ For example:</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Raises:</strong></p>
   <table>
     <thead>
@@ -1055,7 +987,7 @@ For example:</p>
     <tbody>
         <tr>
           <td>
-                <code>CommandArgumentsError</code>
+                <code>CommandParserError</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1070,12 +1002,13 @@ For example:</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.json_parser" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">json_parser</span>
+          <span class="doc doc-object-name doc-function-name">json_parser</span>
 
 
 <a href="#niobot.utils.parsers.json_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -1089,65 +1022,13 @@ For example:</p>
   <div class="doc doc-contents ">
   
       <p>Converts a given string into a JSON object.</p>
-<p>.. Note::
-    If you want this to be fast, you should install orjson. It is a drop-in replacement for the standard library.
-    While the parser will still work without it, it may be slower, especially for larger payloads.</p>
+<div class="admonition note">
+<p class="admonition-title">Performance boost</p>
+<p>If you want this to be fast, you should install orjson. It is a drop-in replacement for the standard library.
+While the parser will still work without it, it may be slower, especially for larger payloads.</p>
+</div>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>_</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../../context/#niobot.context.Context">Context</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Value is unused</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>__</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.commands.Argument" href="../../commands/#niobot.commands.Argument">Argument</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Value is unused</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The value to parse</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1171,6 +1052,8 @@ For example:</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Raises:</strong></p>
   <table>
     <thead>
@@ -1182,11 +1065,146 @@ For example:</p>
     <tbody>
         <tr>
           <td>
-                <code>CommandArgumentsError</code>
+                <code>CommandParserError</code>
           </td>
           <td>
             <div class="doc-md-description">
               <p>if the value is not a valid JSON object.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot.utils.parsers.room_parser" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">room_parser</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#niobot.utils.parsers.room_parser" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">room_parser</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">arg</span><span class="p">:</span> <span class="n">Argument</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parses a room ID, alias, or matrix.to link into a MatrixRoom object.</p>
+<details class="warning">
+<summary>This parser is async</summary>
+<p>This parser is async, and should be awaited when used manually.</p>
+</details>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The MatrixRoom object</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot.utils.parsers.event_parser" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">event_parser</span>
+
+
+<a href="#niobot.utils.parsers.event_parser" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">event_parser</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">event_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">[</span><span class="n">Context</span><span class="p">,</span> <span class="n">Argument</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">typing</span><span class="o">.</span><span class="n">Coroutine</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">,</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">,</span> <span class="n">nio</span><span class="o">.</span><span class="n">Event</span><span class="p">],</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">]</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parses an event reference from either its ID, or matrix.to link.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>event_type</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The event type to expect (such as m.room.message). If None, any event type is allowed.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a class="autorefs autorefs-internal" title="niobot.context.Context" href="../../context/#niobot.context.Context">Context</a>, <a class="autorefs autorefs-internal" title="niobot.commands.Argument" href="../../commands/#niobot.commands.Argument">Argument</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Coroutine" href="https://docs.python.org/3/library/typing.html#typing.Coroutine">Coroutine</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>, nio.<a class="autorefs autorefs-external" title="nio.Event" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.Event">Event</a>]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The actual internal (async) parser.</p>
             </div>
           </td>
         </tr>

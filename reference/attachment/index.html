@@ -1023,18 +1023,20 @@
 
 
 <h3 id="niobot.attachment.AttachmentType" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">AttachmentType</span>
+          <span class="doc doc-object-name doc-class-name">AttachmentType</span>
 
 
 <a href="#niobot.attachment.AttachmentType" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a class="autorefs autorefs-external" title="enum.Enum" href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/enum.html#module-enum">enum</a>.<a class="autorefs autorefs-external" title="enum.Enum" href="https://docs.python.org/3/library/enum.html#enum.Enum">Enum</a></code></p>
 
   
       <p>Enumeration containing the different types of media.</p>
+
+
 
   <p><strong>Attributes:</strong></p>
   <table>
@@ -1094,7 +1096,6 @@
   </table>
 
 
-
   
 
   <div class="doc doc-children">
@@ -1120,15 +1121,15 @@
 
 
 <h3 id="niobot.attachment.BaseAttachment" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">BaseAttachment</span>
+          <span class="doc doc-object-name doc-class-name">BaseAttachment</span>
 
 
 <a href="#niobot.attachment.BaseAttachment" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/abc.html#module-abc">abc</a>.<a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/3/library/abc.html#abc.ABC">ABC</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/abc.html#module-abc">abc</a>.<a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/3/library/abc.html#abc.ABC">ABC</a></code></p>
 
   
       <p>Base class for attachments</p>
@@ -1138,6 +1139,8 @@
 If you pass a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">pathlib.Path</a> or a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">string</a>, the file name will be resolved from the path, overriding
 the <code>file_name</code> parameter.</p>
 </div>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1217,11 +1220,13 @@ the <code>file_name</code> parameter.</p>
             </div>
           </td>
           <td>
-                <code>AttachmentType.FILE</code>
+                <code><a class="autorefs autorefs-internal" title="niobot.attachment.AttachmentType" href="#niobot.attachment.AttachmentType">AttachmentType</a>.<span title="niobot.attachment.AttachmentType.FILE">FILE</span></code>
           </td>
         </tr>
     </tbody>
   </table>
+
+
 
   <p><strong>Attributes:</strong></p>
   <table>
@@ -1314,7 +1319,6 @@ the <code>file_name</code> parameter.</p>
   </table>
 
 
-
   
 
   <div class="doc doc-children">
@@ -1330,7 +1334,7 @@ the <code>file_name</code> parameter.</p>
 
 
 <h4 id="niobot.attachment.BaseAttachment.size_bytes" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">size_bytes</span>
+          <span class="doc doc-object-name doc-attribute-name">size_bytes</span>
 
   
   <span class="doc doc-labels">
@@ -1350,12 +1354,13 @@ the <code>file_name</code> parameter.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.attachment.BaseAttachment.as_body" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">as_body</span>
+          <span class="doc doc-object-name doc-function-name">as_body</span>
 
 
 <a href="#niobot.attachment.BaseAttachment.as_body" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1365,6 +1370,8 @@ the <code>file_name</code> parameter.</p>
   <div class="doc doc-contents ">
   
       <p>Generates the body for the attachment for sending. The attachment must've been uploaded first.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1394,6 +1401,8 @@ the <code>file_name</code> parameter.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1420,17 +1429,18 @@ the <code>file_name</code> parameter.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.attachment.BaseAttachment.from_file" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">from_file</span>
+          <span class="doc doc-object-name doc-function-name">from_file</span>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
       <small class="doc doc-label doc-label-async"><code>async</code></small>
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
 <a href="#niobot.attachment.BaseAttachment.from_file" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1444,6 +1454,8 @@ the <code>file_name</code> parameter.</p>
   
       <p>Creates an attachment from a file.</p>
 <p>You should use this method instead of the constructor, as it will automatically detect all other values</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1487,6 +1499,8 @@ the <code>file_name</code> parameter.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1513,12 +1527,13 @@ the <code>file_name</code> parameter.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.attachment.BaseAttachment.size_as" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">size_as</span>
+          <span class="doc doc-object-name doc-function-name">size_as</span>
 
 
 <a href="#niobot.attachment.BaseAttachment.size_as" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1545,6 +1560,8 @@ the <code>file_name</code> parameter.</p>
 </span></code></pre></div>
 <em>Note that due to the nature of floats, precision may be lost, especially the larger in units you go.</em></p>
 </details>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1574,6 +1591,8 @@ the <code>file_name</code> parameter.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1600,12 +1619,13 @@ the <code>file_name</code> parameter.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.attachment.BaseAttachment.upload" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">upload</span>
+          <span class="doc doc-object-name doc-function-name">upload</span>
 
   
   <span class="doc doc-labels">
@@ -1621,6 +1641,8 @@ the <code>file_name</code> parameter.</p>
   <div class="doc doc-contents ">
   
       <p>Uploads the file to matrix.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1664,6 +1686,8 @@ the <code>file_name</code> parameter.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1703,18 +1727,20 @@ the <code>file_name</code> parameter.</p>
 
 
 <h3 id="niobot.attachment.SupportXYZAmorganBlurHash" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">SupportXYZAmorganBlurHash</span>
+          <span class="doc doc-object-name doc-class-name">SupportXYZAmorganBlurHash</span>
 
 
 <a href="#niobot.attachment.SupportXYZAmorganBlurHash" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
 
   
       <p>Represents an attachment that supports blurhashes.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1744,6 +1770,8 @@ the <code>file_name</code> parameter.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Attributes:</strong></p>
   <table>
     <thead>
@@ -1769,10 +1797,10 @@ the <code>file_name</code> parameter.</p>
   </table>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -1787,7 +1815,7 @@ the <code>file_name</code> parameter.</p>
 
 
 <h4 id="niobot.attachment.SupportXYZAmorganBlurHash.get_blurhash" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">get_blurhash</span>
+          <span class="doc doc-object-name doc-function-name">get_blurhash</span>
 
   
   <span class="doc doc-labels">
@@ -1795,14 +1823,14 @@ the <code>file_name</code> parameter.</p>
   </span>
 
 <a href="#niobot.attachment.SupportXYZAmorganBlurHash.get_blurhash" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_blurhash</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">quality</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_blurhash</span><span class="p">(</span><span class="n">quality</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
       <p>Gets the blurhash of the attachment. See: <a href="https://github.com/woltapp/blurhash">woltapp/blurhash</a></p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1826,11 +1854,13 @@ the <code>file_name</code> parameter.</p>
             </div>
           </td>
           <td>
-                <code>(4, 3)</code>
+                <code>4, 3</code>
           </td>
         </tr>
     </tbody>
   </table>
+
+
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1871,15 +1901,15 @@ the <code>file_name</code> parameter.</p>
 
 
 <h3 id="niobot.attachment.FileAttachment" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">FileAttachment</span>
+          <span class="doc doc-object-name doc-class-name">FileAttachment</span>
 
 
 <a href="#niobot.attachment.FileAttachment" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
 
   
       <p>Represents a generic file attachment.</p>
@@ -1887,6 +1917,8 @@ the <code>file_name</code> parameter.</p>
 <a class="autorefs autorefs-internal" href="#niobot.attachment.AudioAttachment">AudioAttachment</a> for audio,
 and <a class="autorefs autorefs-internal" href="#niobot.attachment.ImageAttachment">ImageAttachment</a> for images.
 This is for everything else.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1959,7 +1991,6 @@ This is for everything else.</p>
   </table>
 
 
-
   
 
   <div class="doc doc-children">
@@ -1985,18 +2016,20 @@ This is for everything else.</p>
 
 
 <h3 id="niobot.attachment.ImageAttachment" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">ImageAttachment</span>
+          <span class="doc doc-object-name doc-class-name">ImageAttachment</span>
 
 
 <a href="#niobot.attachment.ImageAttachment" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.SupportXYZAmorganBlurHash" href="#niobot.attachment.SupportXYZAmorganBlurHash">SupportXYZAmorganBlurHash</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.SupportXYZAmorganBlurHash" href="#niobot.attachment.SupportXYZAmorganBlurHash">SupportXYZAmorganBlurHash</a></code></p>
 
   
       <p>Represents an image attachment.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2124,6 +2157,8 @@ This is for everything else.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Attributes:</strong></p>
   <table>
     <thead>
@@ -2158,10 +2193,10 @@ This is for everything else.</p>
   </table>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -2176,12 +2211,12 @@ This is for everything else.</p>
 
 
 <h4 id="niobot.attachment.ImageAttachment.from_file" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">from_file</span>
+          <span class="doc doc-object-name doc-function-name">from_file</span>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
       <small class="doc doc-label doc-label-async"><code>async</code></small>
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
 <a href="#niobot.attachment.ImageAttachment.from_file" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -2200,6 +2235,8 @@ This is for everything else.</p>
   <div class="doc doc-contents ">
   
       <p>Generates an image attachment</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2313,6 +2350,8 @@ This is for everything else.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2352,18 +2391,20 @@ This is for everything else.</p>
 
 
 <h3 id="niobot.attachment.VideoAttachment" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">VideoAttachment</span>
+          <span class="doc doc-object-name doc-class-name">VideoAttachment</span>
 
 
 <a href="#niobot.attachment.VideoAttachment" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
 
   
       <p>Represents a video attachment.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2492,10 +2533,10 @@ This is for everything else.</p>
   </table>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -2510,12 +2551,12 @@ This is for everything else.</p>
 
 
 <h4 id="niobot.attachment.VideoAttachment.from_file" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">from_file</span>
+          <span class="doc doc-object-name doc-function-name">from_file</span>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
       <small class="doc doc-label doc-label-async"><code>async</code></small>
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
 <a href="#niobot.attachment.VideoAttachment.from_file" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -2545,6 +2586,8 @@ This is independent of <code>generate_blurhash</code>.</p>
 notice a significant increase in upload time, especially considering your video will likely be several
 megabytes.</p>
 </div>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2658,6 +2701,8 @@ megabytes.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2684,17 +2729,18 @@ megabytes.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.attachment.VideoAttachment.generate_thumbnail" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">generate_thumbnail</span>
+          <span class="doc doc-object-name doc-function-name">generate_thumbnail</span>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
       <small class="doc doc-label doc-label-async"><code>async</code></small>
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
 
 <a href="#niobot.attachment.VideoAttachment.generate_thumbnail" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -2706,6 +2752,8 @@ megabytes.</p>
   <div class="doc doc-contents ">
   
       <p>Generates a thumbnail for a video.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2734,6 +2782,8 @@ megabytes.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -2774,19 +2824,18 @@ megabytes.</p>
 
 
 <h3 id="niobot.attachment.AudioAttachment" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">AudioAttachment</span>
+          <span class="doc doc-object-name doc-class-name">AudioAttachment</span>
 
 
 <a href="#niobot.attachment.AudioAttachment" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="#niobot.attachment.BaseAttachment">BaseAttachment</a></code></p>
 
   
       <p>Represents an audio attachment.</p>
-
 
 
   
@@ -2801,17 +2850,18 @@ megabytes.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.attachment.AudioAttachment.from_file" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">from_file</span>
+          <span class="doc doc-object-name doc-function-name">from_file</span>
 
   
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
       <small class="doc doc-label doc-label-async"><code>async</code></small>
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
 <a href="#niobot.attachment.AudioAttachment.from_file" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -2825,6 +2875,8 @@ megabytes.</p>
   <div class="doc doc-contents ">
   
       <p>Generates an audio attachment</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2882,6 +2934,8 @@ megabytes.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2917,12 +2971,13 @@ megabytes.</p>
 </div>
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.attachment.detect_mime_type" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">detect_mime_type</span>
+          <span class="doc doc-object-name doc-function-name">detect_mime_type</span>
 
 
 <a href="#niobot.attachment.detect_mime_type" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -2934,6 +2989,8 @@ megabytes.</p>
   <div class="doc doc-contents ">
   
       <p>Detect the mime type of a file.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2963,6 +3020,8 @@ megabytes.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2989,12 +3048,13 @@ megabytes.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.attachment.get_metadata_ffmpeg" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">get_metadata_ffmpeg</span>
+          <span class="doc doc-object-name doc-function-name">get_metadata_ffmpeg</span>
 
 
 <a href="#niobot.attachment.get_metadata_ffmpeg" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -3007,6 +3067,8 @@ megabytes.</p>
   
       <p>Gets metadata for a file via ffprobe.</p>
 <p><a href="https://github.com/EEKIM10/niobot/raw/master/docs/assets/guides/text/example_ffprobe.json">example output (JSON)</a></p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3036,6 +3098,8 @@ megabytes.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -3062,12 +3126,13 @@ megabytes.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.attachment.get_metadata_imagemagick" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">get_metadata_imagemagick</span>
+          <span class="doc doc-object-name doc-function-name">get_metadata_imagemagick</span>
 
 
 <a href="#niobot.attachment.get_metadata_imagemagick" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -3082,6 +3147,8 @@ megabytes.</p>
 <p>Only returns a limited subset of the data, such as one stream, which contains the format, and size,
 and the format, which contains the filename, format, and size.</p>
 <p><a href="https://github.com/EEKIM10/niobot/raw/master/docs/assets/guides/text/example_identify.json">example output (JSON)</a></p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3111,6 +3178,8 @@ and the format, which contains the filename, format, and size.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -3137,12 +3206,13 @@ and the format, which contains the filename, format, and size.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.attachment.get_metadata" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">get_metadata</span>
+          <span class="doc doc-object-name doc-function-name">get_metadata</span>
 
 
 <a href="#niobot.attachment.get_metadata" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -3157,6 +3227,8 @@ and the format, which contains the filename, format, and size.</p>
       <p>Gets metadata for a file.</p>
 <p>This will use imagemagick (<code>identify</code>) for images where available, falling back to ffmpeg (<code>ffprobe</code>)
 for everything else.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3200,6 +3272,8 @@ for everything else.</p>
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -3226,12 +3300,13 @@ for everything else.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.attachment.first_frame" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">first_frame</span>
+          <span class="doc doc-object-name doc-function-name">first_frame</span>
 
 
 <a href="#niobot.attachment.first_frame" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -3251,6 +3326,8 @@ For example, if you're (worryingly) low on space, this function may fail to extr
 space. Or, someone could temporarily access and read the file before it is deleted.</p>
 <p>This also means that this function may be slow.</p>
 </div>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3294,6 +3371,8 @@ space. Or, someone could temporarily access and read the file before it is delet
     </tbody>
   </table>
 
+
+
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -3320,12 +3399,13 @@ space. Or, someone could temporarily access and read the file before it is delet
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.attachment.generate_blur_hash" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">generate_blur_hash</span>
+          <span class="doc doc-object-name doc-function-name">generate_blur_hash</span>
 
 
 <a href="#niobot.attachment.generate_blur_hash" class="headerlink" title="Permanent link">&para;</a></h3>

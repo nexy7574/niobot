@@ -500,6 +500,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.exceptions.CommandNotFoundError" class="md-nav__link">
+    CommandNotFoundError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.CommandPreparationError" class="md-nav__link">
+    CommandPreparationError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#niobot.exceptions.CommandDisabledError" class="md-nav__link">
     CommandDisabledError
   </a>
@@ -516,6 +530,34 @@
         <li class="md-nav__item">
   <a href="#niobot.exceptions.CommandParserError" class="md-nav__link">
     CommandParserError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.CheckFailure" class="md-nav__link">
+    CheckFailure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.NotOwner" class="md-nav__link">
+    NotOwner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.InsufficientPower" class="md-nav__link">
+    InsufficientPower
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.NotADirectRoom" class="md-nav__link">
+    NotADirectRoom
   </a>
   
 </li>
@@ -756,6 +798,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.exceptions.CommandNotFoundError" class="md-nav__link">
+    CommandNotFoundError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.CommandPreparationError" class="md-nav__link">
+    CommandPreparationError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#niobot.exceptions.CommandDisabledError" class="md-nav__link">
     CommandDisabledError
   </a>
@@ -772,6 +828,34 @@
         <li class="md-nav__item">
   <a href="#niobot.exceptions.CommandParserError" class="md-nav__link">
     CommandParserError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.CheckFailure" class="md-nav__link">
+    CheckFailure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.NotOwner" class="md-nav__link">
+    NotOwner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.InsufficientPower" class="md-nav__link">
+    InsufficientPower
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.exceptions.NotADirectRoom" class="md-nav__link">
+    NotADirectRoom
   </a>
   
 </li>
@@ -819,15 +903,15 @@
 
 
 <h3 id="niobot.exceptions.NioBotException" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">NioBotException</span>
+          <span class="doc doc-object-name doc-class-name">NioBotException</span>
 
 
 <a href="#niobot.exceptions.NioBotException" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a></code></p>
 
   
       <p>Base exception for NioBot.</p>
@@ -837,6 +921,8 @@
 </div>
 <p>All other exceptions raised by this library will subclass this exception, so at least all the below are
 always available:</p>
+
+
 
   <p><strong>Attributes:</strong></p>
   <table>
@@ -873,7 +959,7 @@ always available:</p>
         <tr>
           <td><code>exception</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a>]</code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#BaseException">BaseException</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -884,7 +970,7 @@ always available:</p>
         <tr>
           <td><code>original</code></td>
           <td>
-                <code>nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#Exception">Exception</a> | None</code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.ErrorResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.ErrorResponse">ErrorResponse</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#BaseException">BaseException</a> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -894,7 +980,6 @@ always available:</p>
         </tr>
     </tbody>
   </table>
-
 
 
   
@@ -909,12 +994,13 @@ always available:</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.exceptions.NioBotException.__str__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__str__</span>
+          <span class="doc doc-object-name doc-function-name">__str__</span>
 
 
 <a href="#niobot.exceptions.NioBotException.__str__" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -929,12 +1015,13 @@ always available:</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.exceptions.NioBotException.__repr__" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">__repr__</span>
+          <span class="doc doc-object-name doc-function-name">__repr__</span>
 
 
 <a href="#niobot.exceptions.NioBotException.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -962,19 +1049,18 @@ always available:</p>
 
 
 <h3 id="niobot.exceptions.MessageException" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">MessageException</span>
+          <span class="doc doc-object-name doc-class-name">MessageException</span>
 
 
 <a href="#niobot.exceptions.MessageException" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
 
   
       <p>Exception for message-related errors.</p>
-
 
 
   </div>
@@ -986,19 +1072,18 @@ always available:</p>
 
 
 <h3 id="niobot.exceptions.LoginException" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">LoginException</span>
+          <span class="doc doc-object-name doc-class-name">LoginException</span>
 
 
 <a href="#niobot.exceptions.LoginException" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
 
   
       <p>Exception for login-related errors.</p>
-
 
 
   </div>
@@ -1010,19 +1095,18 @@ always available:</p>
 
 
 <h3 id="niobot.exceptions.MediaUploadException" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">MediaUploadException</span>
+          <span class="doc doc-object-name doc-class-name">MediaUploadException</span>
 
 
 <a href="#niobot.exceptions.MediaUploadException" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.MessageException" href="#niobot.exceptions.MessageException">MessageException</a></code></p>
 
   
       <p>Exception for media-uploading related errors</p>
-
 
 
   </div>
@@ -1034,15 +1118,15 @@ always available:</p>
 
 
 <h3 id="niobot.exceptions.MediaCodecWarning" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">MediaCodecWarning</span>
+          <span class="doc doc-object-name doc-class-name">MediaCodecWarning</span>
 
 
 <a href="#niobot.exceptions.MediaCodecWarning" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#ResourceWarning">ResourceWarning</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#ResourceWarning">ResourceWarning</a></code></p>
 
   
       <p>Warning that is dispatched when a media file is not in a supported codec.</p>
@@ -1054,7 +1138,6 @@ This is usually:</p>
 <li>aac/opus/vorbis/mp3/pcm_* audio</li>
 <li>jpg/png/webp/avif/gif images</li>
 </ul>
-
 
 
   
@@ -1082,19 +1165,18 @@ This is usually:</p>
 
 
 <h3 id="niobot.exceptions.MetadataDetectionException" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">MetadataDetectionException</span>
+          <span class="doc doc-object-name doc-class-name">MetadataDetectionException</span>
 
 
 <a href="#niobot.exceptions.MetadataDetectionException" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.MediaUploadException" href="#niobot.exceptions.MediaUploadException">MediaUploadException</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.MediaUploadException" href="#niobot.exceptions.MediaUploadException">MediaUploadException</a></code></p>
 
   
       <p>Exception raised when metadata detection fails. Most of the time, this is an ffmpeg-related error</p>
-
 
 
   </div>
@@ -1106,19 +1188,80 @@ This is usually:</p>
 
 
 <h3 id="niobot.exceptions.CommandError" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">CommandError</span>
+          <span class="doc doc-object-name doc-class-name">CommandError</span>
 
 
 <a href="#niobot.exceptions.CommandError" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.NioBotException" href="#niobot.exceptions.NioBotException">NioBotException</a></code></p>
 
   
       <p>Exception subclass for all command invocation related errors.</p>
 
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.CommandNotFoundError" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">CommandNotFoundError</span>
+
+
+<a href="#niobot.exceptions.CommandNotFoundError" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandError" href="#niobot.exceptions.CommandError">CommandError</a></code></p>
+
+  
+      <p>Exception raised when a command is not found.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.CommandPreparationError" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">CommandPreparationError</span>
+
+
+<a href="#niobot.exceptions.CommandPreparationError" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandError" href="#niobot.exceptions.CommandError">CommandError</a></code></p>
+
+  
+      <p>Exception subclass for errors raised while preparing a command for execution.</p>
 
 
   </div>
@@ -1130,19 +1273,18 @@ This is usually:</p>
 
 
 <h3 id="niobot.exceptions.CommandDisabledError" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">CommandDisabledError</span>
+          <span class="doc doc-object-name doc-class-name">CommandDisabledError</span>
 
 
 <a href="#niobot.exceptions.CommandDisabledError" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandError" href="#niobot.exceptions.CommandError">CommandError</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandPreparationError" href="#niobot.exceptions.CommandPreparationError">CommandPreparationError</a></code></p>
 
   
       <p>Exception raised when a command is disabled.</p>
-
 
 
   
@@ -1170,19 +1312,18 @@ This is usually:</p>
 
 
 <h3 id="niobot.exceptions.CommandArgumentsError" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">CommandArgumentsError</span>
+          <span class="doc doc-object-name doc-class-name">CommandArgumentsError</span>
 
 
 <a href="#niobot.exceptions.CommandArgumentsError" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandError" href="#niobot.exceptions.CommandError">CommandError</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandPreparationError" href="#niobot.exceptions.CommandPreparationError">CommandPreparationError</a></code></p>
 
   
       <p>Exception subclass for command argument related errors.</p>
-
 
 
   </div>
@@ -1194,20 +1335,177 @@ This is usually:</p>
 
 
 <h3 id="niobot.exceptions.CommandParserError" class="doc doc-heading">
-        <span class="doc doc-object-name doc-class-name">CommandParserError</span>
+          <span class="doc doc-object-name doc-class-name">CommandParserError</span>
 
 
 <a href="#niobot.exceptions.CommandParserError" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandArgumentsError" href="#niobot.exceptions.CommandArgumentsError">CommandArgumentsError</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandArgumentsError" href="#niobot.exceptions.CommandArgumentsError">CommandArgumentsError</a></code></p>
 
   
       <p>Exception raised when there is an error parsing arguments.</p>
 
 
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.CheckFailure" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">CheckFailure</span>
+
+
+<a href="#niobot.exceptions.CheckFailure" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandPreparationError" href="#niobot.exceptions.CommandPreparationError">CommandPreparationError</a></code></p>
+
+  
+      <p>Exception raised when a generic check call fails.</p>
+<p>You should prefer one of the subclass errors over this generic one, or a custom subclass.</p>
+<p><code>CheckFailure</code> is often raised by the built-in checker when a check returns a falsy value without raising an error.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.NotOwner" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">NotOwner</span>
+
+
+<a href="#niobot.exceptions.NotOwner" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CheckFailure" href="#niobot.exceptions.CheckFailure">CheckFailure</a></code></p>
+
+  
+      <p>Exception raised when the command invoker is not the owner of the bot.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.InsufficientPower" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">InsufficientPower</span>
+
+
+<a href="#niobot.exceptions.InsufficientPower" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CheckFailure" href="#niobot.exceptions.CheckFailure">CheckFailure</a></code></p>
+
+  
+      <p>Exception raised when the command invoker does not have enough power to run the command.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="niobot.exceptions.NotADirectRoom" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">NotADirectRoom</span>
+
+
+<a href="#niobot.exceptions.NotADirectRoom" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CheckFailure" href="#niobot.exceptions.CheckFailure">CheckFailure</a></code></p>
+
+  
+      <p>Exception raised when the current room is not <code>m.direct</code> (a DM room)</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
 
   </div>
 
