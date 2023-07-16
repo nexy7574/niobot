@@ -326,6 +326,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sending" class="md-nav__link">
     Sending:
   </a>
@@ -699,6 +706,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sending" class="md-nav__link">
     Sending:
   </a>
@@ -856,6 +870,25 @@ Make sure the binaries are in your PATH:</p>
 </div>
 </div>
 </div>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>Why do I need to install <code>ffmpeg</code> and <code>imagemagick</code>?</summary>
+<p><code>imagemagick</code> is actually optional - if you trust <code>ffprobe</code> to work with all of your images (in some cases it can
+fail to detect newer image formats), then you can skip installing it.</p>
+<p>However, <code>ffmpeg</code> is required for all but file attachments. This is because in order to get some rich data, such as
+dimensions and duration, we need to use <code>ffprobe</code> to get this data.
+Furthermore, in the event <code>imagemagick</code> is not installed, the metadata fetcher falls back to <code>ffprobe</code>.</p>
+<p>Not having these installed will result in a <code>RuntimeError</code> being raised when you try to send an attachment
+when it tries to fetch metadata. This is because the metadata fetcher will not be able to find <code>ffprobe</code> or
+<code>imagemagick</code> in your PATH.</p>
+</details>
+<details class="question">
+<summary>Why does it take a couple of seconds for <code>&lt;attachment&gt;.from_file()</code> to return?</summary>
+<p>The <code>from_file</code> method (see: <a class="autorefs autorefs-internal" href="../../reference/attachment/#niobot.attachment.VideoAttachment.from_file">niobot.VideoAttachment.from_file</a>, <a class="autorefs autorefs-internal" href="../../reference/attachment/#niobot.attachment.ImageAttachment.from_file">niobot.ImageAttachment.from_file</a>, etc.) 
+does a lot of heavy lifting in terms of preparing a file with all the bells and whistles for an upload. 
+This means that it has to do a lot
+of processing, which may take a couple of seconds to return.</p>
+</details>
 <hr />
 <h2 id="sending">Sending:<a class="headerlink" href="#sending" title="Permanent link">&para;</a></h2>
 <h3 id="regular-files">Regular files<a class="headerlink" href="#regular-files" title="Permanent link">&para;</a></h3>
@@ -880,7 +913,7 @@ Regular files do not support:</p>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">attachment</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p>This results in the following:
-<a class="glightbox" href="/assets/guides/images/sending-attachments/file-send.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="/assets/guides/images/sending-attachments/file-send.avif" /></a></p>
+<a class="glightbox" href="https://eekim10.github.io/niobot/assets/guides/images/sending-attachments/file-send.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://eekim10.github.io/niobot/assets/guides/images/sending-attachments/file-send.avif" /></a></p>
 <p>You can then click on the file to download it!</p>
 <h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
 <p>Images are a bit more complex than regular files. They support thumbnails, rich data, and previews.</p>
@@ -897,8 +930,8 @@ painfully slow connections.</p>
 This means people on super slow connections can see a pretty preview of the image (without much detail), instead of
 having an ugly loading spinner or outright blank space in place of a loading image.</p>
 <p>For example:</p>
-<p><a class="glightbox" href="/assets/guides/images/sending-attachments/blurhash-hashed.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pre-blurhash (after loading the image)" loading="lazy" src="/assets/guides/images/sending-attachments/blurhash-hashed.avif" /></a>
-<a class="glightbox" href="/assets/guides/images/sending-attachments/blurhash-dehashed.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="post-blurhash (after loading the image)" loading="lazy" src="/assets/guides/images/sending-attachments/blurhash-dehashed.avif" /></a></p>
+<p><a class="glightbox" href="https://eekim10.github.io/niobot/assets/guides/images/sending-attachments/blurhash-hashed.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pre-blurhash (after loading the image)" loading="lazy" src="https://eekim10.github.io/niobot/assets/guides/images/sending-attachments/blurhash-hashed.avif" /></a>
+<a class="glightbox" href="https://eekim10.github.io/niobot/assets/guides/images/sending-attachments/blurhash-dehashed.avif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="post-blurhash (after loading the image)" loading="lazy" src="https://eekim10.github.io/niobot/assets/guides/images/sending-attachments/blurhash-dehashed.avif" /></a></p>
 <details class="info">
 <summary>This may slow down your image upload</summary>
 <p>Generating blurhashes, especially for large images, even more especially with a weak CPU, can be very slow.
