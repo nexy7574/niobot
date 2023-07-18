@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../commands/">
+        <link rel="prev" href="../context/">
       
       
-        <link rel="next" href="../events/">
+        <link rel="next" href="../exceptions/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Context - Nio-Bot Docs</title>
+        <title>Event Reference - Nio-Bot Docs</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#context" class="md-skip">
+        <a href="#event-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Context
+              Event Reference
             
           </span>
         </div>
@@ -378,6 +378,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../context/" class="md-nav__link">
+        Context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -390,12 +404,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Context
+          Event Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Context
+        Event Reference
       </a>
       
         
@@ -414,72 +428,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command-context" class="md-nav__link">
-    Command Context
+  <a href="#a-little-note-about-event-names" class="md-nav__link">
+    A little note about event names
   </a>
   
-    <nav class="md-nav" aria-label="Command Context">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot-specific-events" class="md-nav__link">
+    NioBot-specific events
+  </a>
+  
+    <nav class="md-nav" aria-label="NioBot-specific events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context" class="md-nav__link">
-    niobot.context.Context
+  <a href="#niobot._event_stubs" class="md-nav__link">
+    niobot._event_stubs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.room" class="md-nav__link">
-    room
+  <a href="#niobot._event_stubs.ready" class="md-nav__link">
+    ready()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.client" class="md-nav__link">
-    client
+  <a href="#niobot._event_stubs.message" class="md-nav__link">
+    message()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.command" class="md-nav__link">
-    command
+  <a href="#niobot._event_stubs.command" class="md-nav__link">
+    command()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.args" class="md-nav__link">
-    args
+  <a href="#niobot._event_stubs.command_complete" class="md-nav__link">
+    command_complete()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.message" class="md-nav__link">
-    message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.Context.original_response" class="md-nav__link">
-    original_response
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.Context.latency" class="md-nav__link">
-    latency
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.Context.respond" class="md-nav__link">
-    respond()
+  <a href="#niobot._event_stubs.command_error" class="md-nav__link">
+    command_error()
   </a>
   
 </li>
@@ -490,50 +490,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contextual-response" class="md-nav__link">
-    Contextual Response
+  <a href="#matrix-nio-events" class="md-nav__link">
+    matrix-nio events
   </a>
-  
-    <nav class="md-nav" aria-label="Contextual Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse" class="md-nav__link">
-    niobot.context.ContextualResponse
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.message" class="md-nav__link">
-    message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.reply" class="md-nav__link">
-    reply()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.edit" class="md-nav__link">
-    edit()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.delete" class="md-nav__link">
-    delete()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -541,20 +500,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../events/" class="md-nav__link">
-        Event Reference
-      </a>
     </li>
   
 
@@ -725,72 +670,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command-context" class="md-nav__link">
-    Command Context
+  <a href="#a-little-note-about-event-names" class="md-nav__link">
+    A little note about event names
   </a>
   
-    <nav class="md-nav" aria-label="Command Context">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot-specific-events" class="md-nav__link">
+    NioBot-specific events
+  </a>
+  
+    <nav class="md-nav" aria-label="NioBot-specific events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context" class="md-nav__link">
-    niobot.context.Context
+  <a href="#niobot._event_stubs" class="md-nav__link">
+    niobot._event_stubs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.room" class="md-nav__link">
-    room
+  <a href="#niobot._event_stubs.ready" class="md-nav__link">
+    ready()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.client" class="md-nav__link">
-    client
+  <a href="#niobot._event_stubs.message" class="md-nav__link">
+    message()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.command" class="md-nav__link">
-    command
+  <a href="#niobot._event_stubs.command" class="md-nav__link">
+    command()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.args" class="md-nav__link">
-    args
+  <a href="#niobot._event_stubs.command_complete" class="md-nav__link">
+    command_complete()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#niobot.context.Context.message" class="md-nav__link">
-    message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.Context.original_response" class="md-nav__link">
-    original_response
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.Context.latency" class="md-nav__link">
-    latency
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.Context.respond" class="md-nav__link">
-    respond()
+  <a href="#niobot._event_stubs.command_error" class="md-nav__link">
+    command_error()
   </a>
   
 </li>
@@ -801,50 +732,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contextual-response" class="md-nav__link">
-    Contextual Response
+  <a href="#matrix-nio-events" class="md-nav__link">
+    matrix-nio events
   </a>
-  
-    <nav class="md-nav" aria-label="Contextual Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse" class="md-nav__link">
-    niobot.context.ContextualResponse
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.message" class="md-nav__link">
-    message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.reply" class="md-nav__link">
-    reply()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.edit" class="md-nav__link">
-    edit()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#niobot.context.ContextualResponse.delete" class="md-nav__link">
-    delete()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -863,7 +753,7 @@
                   
 
   
-    <a href="https://github.com/EEKIM10/niobot/edit/master/docs/reference/context.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/EEKIM10/niobot/edit/master/docs/reference/events.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -871,28 +761,43 @@
   
 
 
-<h1 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h1>
-<p>For each command invoked, the first argument is always a <a href="#command-context"><code>Context</code></a> instance, which holds a lot of
-metadata, and a few utility functions to help you write commands.</p>
-<p>A lot of the time, these are the three main attributes you'll be using:</p>
-<ul>
-<li><a href="#niobot.context.Context.room"><code>Context.room</code></a> (<code>nio.MatrixRoom</code>) - the room the command was invoked in.</li>
-<li><a href="#niobot.context.Context.event"><code>Context.event</code></a> (<code>nio.RoomMessageText</code>) - the message that invoked this command.</li>
-<li><a href="#niobot.context.Context.respond"><code>Context.respond</code></a> - a utility class to help you respond to the command.</li>
-</ul>
-<h2 id="command-context">Command Context<a class="headerlink" href="#command-context" title="Permanent link">&para;</a></h2>
+<h1 id="event-reference">Event Reference<a class="headerlink" href="#event-reference" title="Permanent link">&para;</a></h1>
+<h2 id="a-little-note-about-event-names">A little note about event names<a class="headerlink" href="#a-little-note-about-event-names" title="Permanent link">&para;</a></h2>
+<p>Event names are never prefixed with <code>on_</code>, so make sure you're listening to events like <code>message</code>, not <code>on_message</code>!</p>
+<p>While trying to listen for an <code>on_</code> prefixed event will still work, it will throw warnings in the console, and may
+be deprecated in the future.</p>
+<hr />
+<h2 id="niobot-specific-events">NioBot-specific events<a class="headerlink" href="#niobot-specific-events" title="Permanent link">&para;</a></h2>
+<p>There are two types of events in niobot: those that are dispatched by niobot itself, and those that're dispatched by
+<code>matrix-nio</code>.
+In order to keep backwards compatability, as well as high flexibility and extensibility, niobot's
+<a class="autorefs autorefs-internal" href="../client/#niobot.client.NioBot">NioBot</a> class actually subclasses <a class="autorefs autorefs-external" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.AsyncClient">nio.AsyncClient</a>. This means that anything you can do with
+<code>matrix-nio</code>, you can do with niobot.</p>
+<p>However, for simplicity, niobot dispatches its own events independently of <code>matrix-nio</code>. These events are listed below.</p>
+<p>You can listen to these events with <a class="autorefs autorefs-internal" href="../client/#niobot.client.NioBot.on_event">niobot.NioBot.on_event</a>.</p>
+<details class="example">
+<summary>Example</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">niobot</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">bot</span> <span class="o">=</span> <span class="n">niobot</span><span class="o">.</span><span class="n">NioBot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;ready&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot is ready!&quot;</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Logged in as:&quot;</span><span class="p">,</span> <span class="n">bot</span><span class="o">.</span><span class="n">user_id</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></code></pre></div>
+</details>
 
 
-<div class="doc doc-object doc-class">
+<div class="doc doc-object doc-module">
 
 
-<a id="niobot.context.Context"></a>
+<a id="niobot._event_stubs"></a>
   <div class="doc doc-contents first">
-
-  
-      <p>Event-based context for a command callback</p>
-
-
 
   
 
@@ -904,190 +809,28 @@ metadata, and a few utility functions to help you write commands.</p>
 
 
 
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.room" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">room</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.room" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>The room that the event was dispatched in</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.client" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">client</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.client" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">client</span><span class="p">:</span> <span class="n">NioBot</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>The current instance of the client</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.command" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">command</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.command" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">command</span><span class="p">:</span> <span class="n">Command</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>The current command being invoked</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.args" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">args</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.args" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">args</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Each argument given to this command</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.message" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">message</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.message" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">message</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessageText</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>The current message</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.original_response" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">original_response</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.original_response" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">original_response</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">nio</span><span class="o">.</span><span class="n">RoomSendResponse</span><span class="p">]</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>The result of Context.reply(), if it exists.</p>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.Context.latency" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">latency</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.Context.latency" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">latency</span><span class="p">:</span> <span class="nb">float</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Returns the current event's latency in milliseconds.</p>
-  </div>
-
-</div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
 
-<h3 id="niobot.context.Context.respond" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">respond</span>
+<h3 id="niobot._event_stubs.ready" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">ready</span>
 
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
-<a href="#niobot.context.Context.respond" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">respond</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">BaseAttachment</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContextualResponse</span>
+<a href="#niobot._event_stubs.ready" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ready</span><span class="p">(</span><span class="n">result</span><span class="p">:</span> <span class="n">SyncResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Responds to the current event.</p>
+      <p>An event that is fired when the bot's first <code>sync()</code> is completed.</p>
+<p>This indicates that the bot successfully logged in, synchronised with the server, and is ready to receive events.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1101,183 +844,17 @@ metadata, and a few utility functions to help you write commands.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>content</code></td>
+          <td><code>result</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code><a class="autorefs autorefs-external" title="nio.SyncResponse" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.responses.SyncResponse">SyncResponse</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The text to reply with</p>
+              <p>The response from the sync.</p>
             </div>
           </td>
           <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>file</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.attachment.BaseAttachment" href="../attachment/#niobot.attachment.BaseAttachment">BaseAttachment</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A file to reply with</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.context.ContextualResponse" href="#niobot.context.ContextualResponse">ContextualResponse</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-</div><h2 id="contextual-response">Contextual Response<a class="headerlink" href="#contextual-response" title="Permanent link">&para;</a></h2>
-
-
-<div class="doc doc-object doc-class">
-
-
-<a id="niobot.context.ContextualResponse"></a>
-  <div class="doc doc-contents first">
-
-  
-      <p>Context class for managing replies.</p>
-<p>Usage of this function is not required, however it is a useful utility.</p>
-
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="niobot.context.ContextualResponse.message" class="doc doc-heading">
-        <span class="doc doc-object-name doc-attribute-name">message</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#niobot.context.ContextualResponse.message" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">message</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessageText</span> <span class="o">|</span> <span class="kc">None</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Fetches the current message for this response</p>
-  </div>
-
-</div>
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="niobot.context.ContextualResponse.reply" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">reply</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-<a href="#niobot.context.ContextualResponse.reply" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">reply</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContextualResponse</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Replies to the current response.</p>
-<p>This does NOT reply to the original invoking message.</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>args</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>args to pass to send_message</p>
-            </div>
-          </td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.context.ContextualResponse" href="#niobot.context.ContextualResponse">ContextualResponse</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>a new ContextualResponse object.</p>
-            </div>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -1291,21 +868,32 @@ metadata, and a few utility functions to help you write commands.</p>
 
 
 
-<h3 id="niobot.context.ContextualResponse.edit" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">edit</span>
+<h3 id="niobot._event_stubs.message" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">message</span>
 
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
-<a href="#niobot.context.ContextualResponse.edit" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">edit</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContextualResponse</span>
+<a href="#niobot._event_stubs.message" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">message</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">MatrixRoom</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">RoomMessageText</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Edits the current response.</p>
+      <p>An event that is fired when the bot receives a message in a room that it is in.</p>
+<p>This event is dispatched <em>before</em> commands are processed, and as such the convenient <a class="autorefs autorefs-internal" href="../context/#niobot.context.Context">niobot.Context</a> is
+unavailable.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to be able to use the <a class="autorefs autorefs-internal" href="../context/#niobot.context.Context">niobot.Context</a> in your event handlers, you should use the
+<code>command</code> event instead.</p>
+<p>Furthermore, if you want more fine-grained control over how commands are parsed and handled, you should
+<em>override</em> <a class="autorefs autorefs-internal" href="../client/#niobot.client.NioBot.process_message">niobot.NioBot.process_message</a> instead of using the <code>message</code> event.</p>
+</div>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1319,13 +907,13 @@ metadata, and a few utility functions to help you write commands.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>content</code></td>
+          <td><code>room</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code><a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The new content to edit with</p>
+              <p>The room that the message was received in.</p>
             </div>
           </td>
           <td>
@@ -1333,38 +921,17 @@ metadata, and a few utility functions to help you write commands.</p>
           </td>
         </tr>
         <tr>
-          <td><code>kwargs</code></td>
+          <td><code>event</code></td>
           <td>
+                <code><a class="autorefs autorefs-external" title="nio.RoomMessageText" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.RoomMessageText">RoomMessageText</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Any extra arguments to pass to Client.edit_message</p>
+              <p>The raw event that triggered the message.</p>
             </div>
           </td>
           <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="niobot.context.ContextualResponse" href="#niobot.context.ContextualResponse">ContextualResponse</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>self</p>
-            </div>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -1378,21 +945,23 @@ metadata, and a few utility functions to help you write commands.</p>
 
 
 
-<h3 id="niobot.context.ContextualResponse.delete" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">delete</span>
+<h3 id="niobot._event_stubs.command" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">command</span>
 
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
-<a href="#niobot.context.ContextualResponse.delete" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span><span class="p">(</span><span class="n">reason</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<a href="#niobot._event_stubs.command" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">command</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Redacts the current response.</p>
+      <p>This event is dispatched once a command is finished being prepared, and is about to be invoked.</p>
+<p>This event is dispatched <em>after</em> the <code>message</code> event, but <em>before</em> <code>command_complete</code> and <code>command_error</code>.</p>
+<p>This event features the original context, which can be used to access the message, the command, and the arguments.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1406,39 +975,167 @@ metadata, and a few utility functions to help you write commands.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>reason</code></td>
+          <td><code>ctx</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>An optional reason for the redaction</p>
+              <p>The context of the command.</p>
             </div>
           </td>
           <td>
-                <code>None</code>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
   </table>
 
-  <p><strong>Returns:</strong></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot._event_stubs.command_complete" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">command_complete</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#niobot._event_stubs.command_complete" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">command_complete</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">Any</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>This event is dispatched after a command has been invoked, and has completed successfully.</p>
+<p>This event features the context, which can be used to access the message, the command, and the arguments.</p>
+
+  <p><strong>Parameters:</strong></p>
   <table>
     <thead>
       <tr>
+        <th>Name</th>
         <th>Type</th>
         <th>Description</th>
+        <th>Default</th>
       </tr>
     </thead>
     <tbody>
         <tr>
+          <td><code>ctx</code></td>
           <td>
-                <code>None</code>
+                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>None, as there will be no more response.</p>
+              <p>The context of the command.</p>
             </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>result</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing" href="https://docs.python.org/3/library/typing.html#module-typing">t</a>.<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The result of the command (the returned value of the callback)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot._event_stubs.command_error" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">command_error</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#niobot._event_stubs.command_error" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">command_error</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="n">CommandError</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>This event is dispatched after a command has been invoked, and has completed with an error.</p>
+<p>This event features the context, which can be used to access the message, the command, and the arguments.</p>
+<details class="example">
+<summary>Getting the original error</summary>
+<p>As the error is wrapped in a <a class="autorefs autorefs-internal" href="../exceptions/#niobot.exceptions.CommandError">niobot.CommandError</a>, you can access the original error by accessing the
+[<code>CommandError.original</code>][niobot.CommandError.original] attribute.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="s2">&quot;command_error&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">on_command_error</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">error</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">original_error</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">original</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">original_error</span><span class="p">)</span>
+</span></code></pre></div>
+</details>
+<p>It is encouraged that you inform the end user about an error that has occurred, as by default the error is simply
+logged to the console. Don't forget, you've got the whole <code>Context</code> instance - use it!</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ctx</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The context of the command.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>error</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.exceptions.CommandError" href="../exceptions/#niobot.exceptions.CommandError">CommandError</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The error that was raised.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -1454,18 +1151,22 @@ metadata, and a few utility functions to help you write commands.</p>
 
   </div>
 
-</div>
+</div><hr />
+<h2 id="matrix-nio-events"><code>matrix-nio</code> events<a class="headerlink" href="#matrix-nio-events" title="Permanent link">&para;</a></h2>
+<p>See the <a href="https://matrix-nio.readthedocs.io/en/latest/nio.html#module-nio.events"><code>matrix-nio</code></a> documentation for the
+base-library set of events.</p>
+<p>Remember, you'll need to use <a class="autorefs autorefs-external" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.Client.add_event_callback">nio.Client.add_event_callback</a> in order to listen to these!</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2023 20:00:45</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 18, 2023 16:09:15</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 3, 2023 21:33:51</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 18, 2023 16:09:15</span>
       
     
   </small>
@@ -1493,7 +1194,7 @@ metadata, and a few utility functions to help you write commands.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../commands/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Commands" rel="prev">
+          <a href="../context/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Context" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1502,20 +1203,20 @@ metadata, and a few utility functions to help you write commands.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Commands
+                Context
               </div>
             </div>
           </a>
         
         
           
-          <a href="../events/" class="md-footer__link md-footer__link--next" aria-label="Next: Event Reference" rel="next">
+          <a href="../exceptions/" class="md-footer__link md-footer__link--next" aria-label="Next: Exceptions" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Event Reference
+                Exceptions
               </div>
             </div>
             <div class="md-footer__button md-icon">

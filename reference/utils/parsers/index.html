@@ -140,6 +140,10 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -390,6 +394,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../events/" class="md-nav__link">
+        Event Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../exceptions/" class="md-nav__link">
         Exceptions
       </a>
@@ -411,17 +429,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Utils
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Utils
         </label>
@@ -539,6 +557,20 @@
         <li class="md-nav__item">
   <a href="#niobot.utils.parsers.event_parser" class="md-nav__link">
     event_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.matrix_to_parser" class="md-nav__link">
+    matrix_to_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.mxc_url_parser" class="md-nav__link">
+    mxc_url_parser()
   </a>
   
 </li>
@@ -690,6 +722,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.matrix_to_parser" class="md-nav__link">
+    matrix_to_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niobot.utils.parsers.mxc_url_parser" class="md-nav__link">
+    mxc_url_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-parsers" class="md-nav__link">
     Creating Parsers
   </a>
@@ -710,6 +756,11 @@
                 
                   
 
+  
+    <a href="https://github.com/EEKIM10/niobot/edit/master/docs/reference/utils/parsers.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
   
   
 
@@ -766,13 +817,12 @@ For example:</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.boolean_parser" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">boolean_parser</span>
+        <span class="doc doc-object-name doc-function-name">boolean_parser</span>
 
 
 <a href="#niobot.utils.parsers.boolean_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -787,8 +837,6 @@ For example:</p>
 <p>The following resolves to false:
 * 0, n, no, false, off</p>
 <p>The following will raise a command argument error: anything else</p>
-
-
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -816,13 +864,12 @@ For example:</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.float_parser" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">float_parser</span>
+        <span class="doc doc-object-name doc-function-name">float_parser</span>
 
 
 <a href="#niobot.utils.parsers.float_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -832,8 +879,6 @@ For example:</p>
   <div class="doc doc-contents ">
   
       <p>Converts a given string into a floating point number.</p>
-
-
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -856,8 +901,6 @@ For example:</p>
         </tr>
     </tbody>
   </table>
-
-
 
   <p><strong>Raises:</strong></p>
   <table>
@@ -885,13 +928,12 @@ For example:</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.integer_parser" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">integer_parser</span>
+        <span class="doc doc-object-name doc-function-name">integer_parser</span>
 
 
 <a href="#niobot.utils.parsers.integer_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -905,8 +947,6 @@ For example:</p>
   <div class="doc doc-contents ">
   
       <p>Converts a given value into an integer, or a float if allowed.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -950,8 +990,6 @@ For example:</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -973,8 +1011,6 @@ For example:</p>
         </tr>
     </tbody>
   </table>
-
-
 
   <p><strong>Raises:</strong></p>
   <table>
@@ -1002,13 +1038,12 @@ For example:</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.json_parser" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">json_parser</span>
+        <span class="doc doc-object-name doc-function-name">json_parser</span>
 
 
 <a href="#niobot.utils.parsers.json_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -1027,8 +1062,6 @@ For example:</p>
 <p>If you want this to be fast, you should install orjson. It is a drop-in replacement for the standard library.
 While the parser will still work without it, it may be slower, especially for larger payloads.</p>
 </div>
-
-
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1051,8 +1084,6 @@ While the parser will still work without it, it may be slower, especially for la
         </tr>
     </tbody>
   </table>
-
-
 
   <p><strong>Raises:</strong></p>
   <table>
@@ -1080,13 +1111,12 @@ While the parser will still work without it, it may be slower, especially for la
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.room_parser" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">room_parser</span>
+        <span class="doc doc-object-name doc-function-name">room_parser</span>
 
   
   <span class="doc doc-labels">
@@ -1106,8 +1136,6 @@ While the parser will still work without it, it may be slower, especially for la
 <summary>This parser is async</summary>
 <p>This parser is async, and should be awaited when used manually.</p>
 </details>
-
-
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1135,13 +1163,12 @@ While the parser will still work without it, it may be slower, especially for la
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="niobot.utils.parsers.event_parser" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">event_parser</span>
+        <span class="doc doc-object-name doc-function-name">event_parser</span>
 
 
 <a href="#niobot.utils.parsers.event_parser" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -1156,8 +1183,6 @@ While the parser will still work without it, it may be slower, especially for la
   <div class="doc doc-contents ">
   
       <p>Parses an event reference from either its ID, or matrix.to link.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1187,8 +1212,6 @@ While the parser will still work without it, it may be slower, especially for la
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1210,6 +1233,140 @@ While the parser will still work without it, it may be slower, especially for la
         </tr>
     </tbody>
   </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot.utils.parsers.matrix_to_parser" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">matrix_to_parser</span>
+
+
+<a href="#niobot.utils.parsers.matrix_to_parser" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">matrix_to_parser</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">require_room</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">require_event</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">allow_user_as_room</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Callable</span><span class="p">[</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">[</span><span class="n">Context</span><span class="p">,</span> <span class="n">Argument</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">typing</span><span class="o">.</span><span class="n">Coroutine</span><span class="p">[</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="n">typing</span><span class="o">.</span><span class="n">NamedTuple</span><span class="p">[</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="n">MatrixToLink</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="n">typing</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span><span class="p">,</span> <span class="n">nio</span><span class="o">.</span><span class="n">Event</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="p">],</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="p">],</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">]</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Advanced multi-functional parser for matrix.to links.</p>
+<p>This parser takes an https://matrix.to link, and breaks it down into room-id and event-id where applicable. It then
+returns all of these as a namedtuple.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>require_room</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to require the room part of this url to be present</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>require_event</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to require the event part of this url to be present</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>allow_user_as_room</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to allow user links as room links</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a class="autorefs autorefs-internal" title="niobot.context.Context" href="../../context/#niobot.context.Context">Context</a>, <a class="autorefs autorefs-internal" title="niobot.commands.Argument" href="../../commands/#niobot.commands.Argument">Argument</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Coroutine" href="https://docs.python.org/3/library/typing.html#typing.Coroutine">Coroutine</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.NamedTuple" href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">NamedTuple</a>[<span title="niobot.utils.parsers.MatrixToLink">MatrixToLink</span>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a>, nio.<a class="autorefs autorefs-external" title="nio.Event" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.Event">Event</a> | None]]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The actual internal (async) parser.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="niobot.utils.parsers.mxc_url_parser" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">mxc_url_parser</span>
+
+
+<a href="#niobot.utils.parsers.mxc_url_parser" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">mxc_url_parser</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">__</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MatrixMXCUrl</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parses an MXC URL. Basically just a validator</p>
 
   </div>
 
@@ -1253,6 +1410,21 @@ While the parser will still work without it, it may be slower, especially for la
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </span></code></pre></div>
 
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2023 20:00:45</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2023 20:00:45</span>
+      
+    
+  </small>
+</div>
+
 
 
 
@@ -1270,6 +1442,44 @@ While the parser will still work without it, it may be slower, especially for la
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../help_command/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The help command" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                The help command
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../string_view/" class="md-footer__link md-footer__link--next" aria-label="Next: String View" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                String View
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1278,6 +1488,21 @@ While the parser will still work without it, it may be slower, especially for la
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://matrix.to/#/#niobot:nexy7574.co.uk" target="_blank" rel="noopener" title="matrix.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033a3.312 3.312 0 0 1 1.117-1.024c.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282a1.637 1.637 0 0 0-.439.595c-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/></svg>
     </a>
   
 </div>
@@ -1291,7 +1516,7 @@ While the parser will still work without it, it may be slower, especially for la
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.action.edit", "navigation.footer", "header.autohide", "search.share", "navigation.instant", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>

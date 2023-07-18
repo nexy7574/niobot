@@ -140,6 +140,10 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -530,6 +534,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.get_dm_room" class="md-nav__link">
+    get_dm_room()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.client.NioBot.send_message" class="md-nav__link">
     send_message()
   </a>
@@ -626,6 +637,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        Event Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exceptions/" class="md-nav__link">
         Exceptions
       </a>
@@ -645,17 +670,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Utils
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Utils
         </label>
@@ -933,6 +958,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.get_dm_room" class="md-nav__link">
+    get_dm_room()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.client.NioBot.send_message" class="md-nav__link">
     send_message()
   </a>
@@ -1001,6 +1033,11 @@
                   
 
   
+    <a href="https://github.com/EEKIM10/niobot/edit/master/docs/reference/client.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
   
 
 
@@ -1029,20 +1066,18 @@
 
 
 <h3 id="niobot.client.NioBot" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">NioBot</span>
+        <span class="doc doc-object-name doc-class-name">NioBot</span>
 
 
 <a href="#niobot.client.NioBot" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>nio.<a class="autorefs autorefs-external" title="nio.AsyncClient" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.AsyncClient">AsyncClient</a></code></p>
+      <p class="doc doc-class-bases">
+        Bases: <code>nio.<a class="autorefs autorefs-external" title="nio.AsyncClient" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.AsyncClient">AsyncClient</a></code></p>
 
   
       <p>The main client for NioBot.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1209,6 +1244,7 @@
   </table>
 
 
+
   
 
   <div class="doc doc-children">
@@ -1224,7 +1260,7 @@
 
 
 <h4 id="niobot.client.NioBot.commands" class="doc doc-heading">
-          <span class="doc doc-object-name doc-attribute-name">commands</span>
+        <span class="doc doc-object-name doc-attribute-name">commands</span>
 
   
   <span class="doc doc-labels">
@@ -1257,7 +1293,7 @@ value multiple times if it has aliases.</p>
 
 
 <h4 id="niobot.client.NioBot.modules" class="doc doc-heading">
-          <span class="doc doc-object-name doc-attribute-name">modules</span>
+        <span class="doc doc-object-name doc-attribute-name">modules</span>
 
   
   <span class="doc doc-labels">
@@ -1281,13 +1317,12 @@ value multiple times if it has aliases.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.latency" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">latency</span>
+        <span class="doc doc-object-name doc-function-name">latency</span>
 
   
   <span class="doc doc-labels">
@@ -1303,8 +1338,6 @@ value multiple times if it has aliases.</p>
   <div class="doc doc-contents ">
   
       <p>Returns the latency for a given event in milliseconds</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1348,8 +1381,6 @@ value multiple times if it has aliases.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1376,13 +1407,12 @@ value multiple times if it has aliases.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.dispatch" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">dispatch</span>
+        <span class="doc doc-object-name doc-function-name">dispatch</span>
 
 
 <a href="#niobot.client.NioBot.dispatch" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1397,13 +1427,12 @@ value multiple times if it has aliases.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.is_old" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">is_old</span>
+        <span class="doc doc-object-name doc-function-name">is_old</span>
 
 
 <a href="#niobot.client.NioBot.is_old" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1418,13 +1447,12 @@ value multiple times if it has aliases.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.update_read_receipts" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">update_read_receipts</span>
+        <span class="doc doc-object-name doc-function-name">update_read_receipts</span>
 
   
   <span class="doc doc-labels">
@@ -1443,13 +1471,12 @@ value multiple times if it has aliases.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.process_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">process_message</span>
+        <span class="doc doc-object-name doc-function-name">process_message</span>
 
   
   <span class="doc doc-labels">
@@ -1470,13 +1497,12 @@ value multiple times if it has aliases.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.is_owner" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">is_owner</span>
+        <span class="doc doc-object-name doc-function-name">is_owner</span>
 
 
 <a href="#niobot.client.NioBot.is_owner" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1486,8 +1512,6 @@ value multiple times if it has aliases.</p>
   <div class="doc doc-contents ">
   
       <p>Checks whether a user is the owner of the bot.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1517,8 +1541,6 @@ value multiple times if it has aliases.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1545,13 +1567,12 @@ value multiple times if it has aliases.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.mount_module" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">mount_module</span>
+        <span class="doc doc-object-name doc-function-name">mount_module</span>
 
 
 <a href="#niobot.client.NioBot.mount_module" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1573,8 +1594,6 @@ and the module will fail the mount.</p>
 at which point not only will the first full sync have completed (meaning the bot has all of its caches
 populated), but the event loop will be running.</p>
 </details>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1604,8 +1623,6 @@ populated), but the event loop will be running.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1627,8 +1644,6 @@ populated), but the event loop will be running.</p>
         </tr>
     </tbody>
   </table>
-
-
 
   <p><strong>Raises:</strong></p>
   <table>
@@ -1676,13 +1691,12 @@ populated), but the event loop will be running.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.get_command" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_command</span>
+        <span class="doc doc-object-name doc-function-name">get_command</span>
 
 
 <a href="#niobot.client.NioBot.get_command" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1692,8 +1706,6 @@ populated), but the event loop will be running.</p>
   <div class="doc doc-contents ">
   
       <p>Attempts to retrieve an internal command</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1723,8 +1735,6 @@ populated), but the event loop will be running.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -1751,13 +1761,12 @@ populated), but the event loop will be running.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.add_command" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">add_command</span>
+        <span class="doc doc-object-name doc-function-name">add_command</span>
 
 
 <a href="#niobot.client.NioBot.add_command" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1774,13 +1783,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.remove_command" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">remove_command</span>
+        <span class="doc doc-object-name doc-function-name">remove_command</span>
 
 
 <a href="#niobot.client.NioBot.remove_command" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1796,13 +1804,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.command" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">command</span>
+        <span class="doc doc-object-name doc-function-name">command</span>
 
 
 <a href="#niobot.client.NioBot.command" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1817,13 +1824,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.on_event" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">on_event</span>
+        <span class="doc doc-object-name doc-function-name">on_event</span>
 
 
 <a href="#niobot.client.NioBot.on_event" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1838,13 +1844,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.room_send" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">room_send</span>
+        <span class="doc doc-object-name doc-function-name">room_send</span>
 
   
   <span class="doc doc-labels">
@@ -1869,13 +1874,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.get_cached_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_cached_message</span>
+        <span class="doc doc-object-name doc-function-name">get_cached_message</span>
 
 
 <a href="#niobot.client.NioBot.get_cached_message" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -1896,13 +1900,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.fetch_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">fetch_message</span>
+        <span class="doc doc-object-name doc-function-name">fetch_message</span>
 
   
   <span class="doc doc-labels">
@@ -1921,13 +1924,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.wait_for_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">wait_for_message</span>
+        <span class="doc doc-object-name doc-function-name">wait_for_message</span>
 
   
   <span class="doc doc-labels">
@@ -1957,13 +1959,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.generate_mx_reply" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">generate_mx_reply</span>
+        <span class="doc doc-object-name doc-function-name">generate_mx_reply</span>
 
   
   <span class="doc doc-labels">
@@ -1984,13 +1985,127 @@ Otherwise, it returns None.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="niobot.client.NioBot.get_dm_room" class="doc doc-heading">
+        <span class="doc doc-object-name doc-function-name">get_dm_room</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#niobot.client.NioBot.get_dm_room" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_dm_room</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixUser</span> <span class="o">|</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Gets (or creates) a room that is a private DM room for the given user.</p>
+<div class="admonition danger">
+<p class="admonition-title">Unreliable detection</p>
+<p>Due to an <a href="https://github.com/poljar/matrix-nio/issues/421">issue in <code>matrix-nio</code></a>, some clients
+(as per the matrix spec) do not issue the flag that indicates a room is a DM room while inviting users.</p>
+<p>Due to the lack of a native solution in matrix-nio, <code>niobot</code> has a very hacky workaround that hooks into
+the timeline for rooms, and manually detects DM rooms.
+Due to this being a workaround, not a full solution, this may be unreliable. You should not rely on this
+function to reliably return an existing DM room, or a valid DM room at all.</p>
+</div>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>user</code></td>
+          <td>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixUser" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixUser">MatrixUser</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The User or user ID to fetch a DM room for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The DM room, either pre-existing, or a new one.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>NioBotException</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A room could not be created.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>RuntimeError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The room was created, but was not in the internal cache.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.send_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">send_message</span>
+        <span class="doc doc-object-name doc-function-name">send_message</span>
 
   
   <span class="doc doc-labels">
@@ -1999,7 +2114,7 @@ Otherwise, it returns None.</p>
 
 <a href="#niobot.client.NioBot.send_message" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">send_message</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span> <span class="o">|</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixUser</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">file</span><span class="p">:</span> <span class="n">BaseAttachment</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">reply_to</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessageText</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2011,8 +2126,12 @@ Otherwise, it returns None.</p>
   <div class="doc doc-contents ">
   
       <p>Sends a message.</p>
-
-
+<div class="admonition tip">
+<p class="admonition-title">New! DMs!</p>
+<p>As of v1.1.0, you can now send messages to users (either a [<code>nio.MatrixUser</code>][] or a user ID string),
+and a direct message room will automatically be created for you if one does not exist, using an existing
+one if it does.</p>
+</div>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2028,11 +2147,11 @@ Otherwise, it returns None.</p>
         <tr>
           <td><code>room</code></td>
           <td>
-                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code>nio.<a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a> | nio.<a class="autorefs autorefs-external" title="nio.MatrixUser" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixUser">MatrixUser</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The room to send this message to</p>
+              <p>The room or to send this message to</p>
             </div>
           </td>
           <td>
@@ -2112,8 +2231,6 @@ Otherwise, it returns None.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2135,8 +2252,6 @@ Otherwise, it returns None.</p>
         </tr>
     </tbody>
   </table>
-
-
 
   <p><strong>Raises:</strong></p>
   <table>
@@ -2174,13 +2289,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.edit_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">edit_message</span>
+        <span class="doc doc-object-name doc-function-name">edit_message</span>
 
   
   <span class="doc doc-labels">
@@ -2202,8 +2316,6 @@ Otherwise, it returns None.</p>
   
       <p>Edit an existing message. You must be the sender of the message.</p>
 <p>You also cannot edit messages that are attachments.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2289,8 +2401,6 @@ Otherwise, it returns None.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Raises:</strong></p>
   <table>
     <thead>
@@ -2327,13 +2437,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.delete_message" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">delete_message</span>
+        <span class="doc doc-object-name doc-function-name">delete_message</span>
 
   
   <span class="doc doc-labels">
@@ -2351,8 +2460,6 @@ Otherwise, it returns None.</p>
   <div class="doc doc-contents ">
   
       <p>Delete an existing message. You must be the sender of the message.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2410,8 +2517,6 @@ Otherwise, it returns None.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Raises:</strong></p>
   <table>
     <thead>
@@ -2448,13 +2553,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.add_reaction" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">add_reaction</span>
+        <span class="doc doc-object-name doc-function-name">add_reaction</span>
 
   
   <span class="doc doc-labels">
@@ -2472,8 +2576,6 @@ Otherwise, it returns None.</p>
   <div class="doc doc-contents ">
   
       <p>Adds an emoji "reaction" to a message.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2531,8 +2633,6 @@ Otherwise, it returns None.</p>
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2554,8 +2654,6 @@ Otherwise, it returns None.</p>
         </tr>
     </tbody>
   </table>
-
-
 
   <p><strong>Raises:</strong></p>
   <table>
@@ -2583,13 +2681,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.redact_reaction" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">redact_reaction</span>
+        <span class="doc doc-object-name doc-function-name">redact_reaction</span>
 
   
   <span class="doc doc-labels">
@@ -2611,13 +2708,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.start" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">start</span>
+        <span class="doc doc-object-name doc-function-name">start</span>
 
   
   <span class="doc doc-labels">
@@ -2640,13 +2736,12 @@ Otherwise, it returns None.</p>
 
 </div>
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h4 id="niobot.client.NioBot.run" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">run</span>
+        <span class="doc doc-object-name doc-function-name">run</span>
 
 
 <a href="#niobot.client.NioBot.run" class="headerlink" title="Permanent link">&para;</a></h4>
@@ -2665,8 +2760,6 @@ This should be the last function to be called in your script, as once it exits, 
 <p>Note:
     This function is literally just asyncio.run(NioBot.start(...)), so you won't have much control over the
     asyncio event loop. If you want more control, you should use await NioBot.start(...) instead.</p>
-
-
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2724,8 +2817,6 @@ This should be the last function to be called in your script, as once it exits, 
     </tbody>
   </table>
 
-
-
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
@@ -2769,6 +2860,21 @@ This should be the last function to be called in your script, as once it exits, 
 
 </div>
 
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2023 20:00:45</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 3, 2023 21:33:51</span>
+      
+    
+  </small>
+</div>
+
 
 
 
@@ -2786,6 +2892,44 @@ This should be the last function to be called in your script, as once it exits, 
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../attachment/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Attachments" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Attachments
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Commands" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Commands
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2794,6 +2938,21 @@ This should be the last function to be called in your script, as once it exits, 
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://matrix.to/#/#niobot:nexy7574.co.uk" target="_blank" rel="noopener" title="matrix.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033a3.312 3.312 0 0 1 1.117-1.024c.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282a1.637 1.637 0 0 0-.439.595c-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/></svg>
     </a>
   
 </div>
@@ -2807,7 +2966,7 @@ This should be the last function to be called in your script, as once it exits, 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.action.edit", "navigation.footer", "header.autohide", "search.share", "navigation.instant", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>

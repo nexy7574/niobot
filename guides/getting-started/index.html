@@ -140,6 +140,10 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -453,6 +457,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-is-logging-in-with-a-password-so-bad" class="md-nav__link">
+    Why is logging in with a password so bad?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -573,6 +584,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../reference/events/" class="md-nav__link">
+        Event Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../reference/exceptions/" class="md-nav__link">
         Exceptions
       </a>
@@ -592,17 +617,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
           Utils
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Utils
         </label>
@@ -880,6 +905,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-is-logging-in-with-a-password-so-bad" class="md-nav__link">
+    Why is logging in with a password so bad?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -894,6 +926,11 @@
                 
                   
 
+  
+    <a href="https://github.com/EEKIM10/niobot/edit/master/docs/guides/getting-started.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
   
   
 
@@ -1109,8 +1146,8 @@ the same session, and to avoid having to use your password in your code.</p>
 For example:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span><span class="o">[</span>me@host<span class="w"> </span>test-niobot<span class="o">]</span>$<span class="w"> </span>niocli<span class="w"> </span>get-access-token
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>User<span class="w"> </span>ID<span class="w"> </span><span class="o">(</span>@username:homeserver.tld<span class="o">)</span>:<span class="w"> </span>@test:matrix.org
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Password<span class="w"> </span><span class="o">(</span>will<span class="w"> </span>not<span class="w"> </span><span class="nb">echo</span><span class="o">)</span>:<span class="w"> </span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Device<span class="w"> </span>ID<span class="w"> </span><span class="o">(</span>a<span class="w"> </span>memorable<span class="w"> </span>display<span class="w"> </span>name<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>login,<span class="w"> </span>such<span class="w"> </span>as<span class="w"> </span><span class="s1">&#39;bot-production&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">[</span>host<span class="o">]</span>:<span class="w"> </span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Password<span class="w"> </span><span class="o">(</span>will<span class="w"> </span>not<span class="w"> </span><span class="nb">echo</span><span class="o">)</span>:
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Device<span class="w"> </span>ID<span class="w"> </span><span class="o">(</span>a<span class="w"> </span>memorable<span class="w"> </span>display<span class="w"> </span>name<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>login,<span class="w"> </span>such<span class="w"> </span>as<span class="w"> </span><span class="s1">&#39;bot-production&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">[</span>host<span class="o">]</span>:
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Resolving<span class="w"> </span>homeserver...<span class="w"> </span>OK
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Getting<span class="w"> </span>access<span class="w"> </span>token...<span class="w"> </span>OK
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Access<span class="w"> </span>token:<span class="w"> </span>syt_&lt;...&gt;
@@ -1221,6 +1258,40 @@ within a couple seconds, your bot will automatically join your room!</p>
 </span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">!&quot;</span> <span class="o">%</span> <span class="n">ctx</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">sender</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
+<h2 id="why-is-logging-in-with-a-password-so-bad">Why is logging in with a password so bad?<a class="headerlink" href="#why-is-logging-in-with-a-password-so-bad" title="Permanent link">&para;</a></h2>
+<p>You may get a notice in your console when you try to log in with a password.</p>
+<p>This is because logging in with a password is actually an awful idea.
+It will create an entirely new session, 9 times out of 10 a hard-coded password, can cause issues with e2ee, and is
+generally just a bad idea.</p>
+<p>What you <strong>should</strong> do instead is get an access token.</p>
+<p>If you already know how to get yours, that's great! Otherwise, <code>niocli</code> has the solution:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>niocli<span class="w"> </span>get-access-token
+</span></code></pre></div>
+<p>This will log into the account when prompted, and will grab you an access token, spitting it out into your terminal.</p>
+<p>From there, you can replace <code>bot.run(password="...")</code> with <code>bot.run(access_token="...")</code>, and you're good to go!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You'll also notice that the bot starts up in a matter of seconds when using an access token.
+This is because the client has already logged in before, so rather than having to sync the entire state and history,
+it only downloads and syncs new events and data.</p>
+<p>In comparison to using a password, which creates a new session, meaning the client has to download and sync the
+entire history yet again.</p>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 18, 2023 17:57:32</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2023 21:32:32</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1239,6 +1310,44 @@ within a couple seconds, your bot will automatically join your room!</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Index" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Index
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sending-attachments/" class="md-footer__link md-footer__link--next" aria-label="Next: Sending attachments" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Sending attachments
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1247,6 +1356,21 @@ within a couple seconds, your bot will automatically join your room!</p>
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://matrix.to/#/#niobot:nexy7574.co.uk" target="_blank" rel="noopener" title="matrix.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033a3.312 3.312 0 0 1 1.117-1.024c.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282a1.637 1.637 0 0 0-.439.595c-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/></svg>
     </a>
   
 </div>
@@ -1260,7 +1384,7 @@ within a couple seconds, your bot will automatically join your room!</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.action.edit", "navigation.footer", "header.autohide", "search.share", "navigation.instant", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
