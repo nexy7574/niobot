@@ -1617,15 +1617,6 @@ the <code>file_name</code> parameter.</p>
   <div class="doc doc-contents ">
   
       <p>Creates an attachment from an MXC URL.</p>
-<div class="admonition warning">
-<p class="admonition-title">This function loads the entire attachment into memory.</p>
-<p>If you are downloading large attachments, you should set <code>force_write</code> to <code>True</code>, otherwise the downloaded
-attachment is pushed into an [<code>io.BytesIO</code>][] object (for speed benefits), which can cause memory issues
-on low-memory systems.</p>
-<p>Bear in mind that most attachments are &lt;= 100 megabytes. Also, forcing temp file writes may not be useful
-unless your temporary file directory is backed by a physical disk, because otherwise you're just loading
-into RAM with extra steps (for example, by default, <code>/tmp</code> is in-memory on linux, but <code>/var/tmp</code> is not).</p>
-</div>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1808,6 +1799,28 @@ into RAM with extra steps (for example, by default, <code>/tmp</code> is in-memo
           <td>
             <div class="doc-md-description">
               <p>The downloaded and probed attachment.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>niobot.MediaDetectionException</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>if the MIME type could not be detected.</p>
             </div>
           </td>
         </tr>

@@ -1254,6 +1254,19 @@
                 <code>None</code>
           </td>
         </tr>
+        <tr>
+          <td><code>max_message_cache</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The maximum number of messages to cache. Defaults to 1000.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
     </tbody>
   </table>
 
@@ -1474,7 +1487,9 @@ value multiple times if it has aliases.</p>
   </span>
 
 <a href="#niobot.client.NioBot.update_read_receipts" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">update_read_receipts</span><span class="p">(</span><span class="n">room</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">update_read_receipts</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">room</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">Event</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">

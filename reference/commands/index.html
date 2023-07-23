@@ -911,7 +911,7 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">bot</span> <span class="o">=</span> <span class="n">NioBot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">[</span><span class="n">Argument</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)])</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">&quot;echo&quot;</span><span class="p">)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span> <span class="nf">echo</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">niobot</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
@@ -1619,20 +1619,76 @@ bot.mount_module</p>
 
   <div class="doc doc-contents ">
   
-      <div class="language-text highlight"><pre><span></span><code>Allows you to register checks in modules.
+      <p>Allows you to register checks in modules.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@niobot</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nd">@niobot</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">my_check_func</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Check&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">my_command</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">niobot</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">pass</span>
+</span></code></pre></div>
 
-```python
-@niobot.command()
-@niobot.check(my_check_func, name=&quot;My Check&quot;)
-async def my_command(ctx: niobot.Context):
-    pass
-```
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>function</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/3/library/typing.html#typing.Callable">Callable</a>[[<a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Coroutine" href="https://docs.python.org/3/library/typing.html#typing.Coroutine">Coroutine</a>[None, None, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a>]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The function to register as a check</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A human-readable name for the check. Defaults to function.<strong>name</strong></p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
-:param function: The function to register as a check
-:param name: A human-readable name for the check. Defaults to function.__name__
-:return: The decorated function.
-</code></pre></div>
-<p>=</p>
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#callable">callable</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The decorated function.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 
