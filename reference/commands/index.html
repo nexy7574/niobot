@@ -544,6 +544,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#niobot.commands.Command.construct_context" class="md-nav__link">
+    construct_context()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -556,6 +563,13 @@
   
     <nav class="md-nav" aria-label="Module">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niobot.commands.Module.log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#niobot.commands.Module.__setup__" class="md-nav__link">
@@ -924,6 +938,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#niobot.commands.Command.construct_context" class="md-nav__link">
+    construct_context()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -936,6 +957,13 @@
   
     <nav class="md-nav" aria-label="Module">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niobot.commands.Module.log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#niobot.commands.Module.__setup__" class="md-nav__link">
@@ -1345,6 +1373,20 @@ while wrapping the function its decorating.</p>
                 <code>False</code>
           </td>
         </tr>
+        <tr>
+          <td><code>greedy</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>When enabled, <code>CommandArgumentsError</code> will not be raised if too many arguments are given to the command. This is useful for commands that take a variable amount of arguments, and retrieve them via <code>Context.args</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
     </tbody>
   </table>
 
@@ -1573,6 +1615,144 @@ while wrapping the function its decorating.</p>
 </div>
 
 
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="niobot.commands.Command.construct_context" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">construct_context</span>
+
+
+<a href="#niobot.commands.Command.construct_context" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">construct_context</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">client</span><span class="p">:</span> <span class="n">NioBot</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">room</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">MatrixRoom</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">src_event</span><span class="p">:</span> <span class="n">nio</span><span class="o">.</span><span class="n">RoomMessageText</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">meta</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="n">Context</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Context</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Constructs the context for the current command.</p>
+<p>You will rarely need to do this, the library automatically gives you a Context when a command is run.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>client</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.client.NioBot" href="../client/#niobot.client.NioBot">NioBot</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current instance of the client.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>room</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="nio.MatrixRoom" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.rooms.MatrixRoom">MatrixRoom</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The room the command was invoked in.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>src_event</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="nio.RoomMessageText" href="https://matrix-nio.readthedocs.io/en/latest/nio.html#nio.events.room_events.RoomMessageText">RoomMessageText</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The source event that triggered the command. Must be <code>nio.RoomMessageText</code>.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>meta</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The invoking string (usually the command name, however may be an alias instead)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cls</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#type">type</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The class to construct the context with. Defaults to <code>Context</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a></code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.context.Context" href="../context/#niobot.context.Context">Context</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The constructed Context.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
 
   </div>
 
@@ -1593,6 +1773,45 @@ while wrapping the function its decorating.</p>
 
   <div class="doc doc-contents ">
 
+  
+      <p>Represents a module.</p>
+<p>A module houses a set of commands and events, and can be used to modularise your bot, and organise commands and
+their respective code into multiple files and classes for ease of use, development, and maintenance.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>bot</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The bot instance this module is mounted to.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>client</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Alias for <code>bot</code>.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 
   
@@ -1604,6 +1823,30 @@ while wrapping the function its decorating.</p>
 
 
 
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="niobot.commands.Module.log" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">log</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#niobot.commands.Module.log" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">log</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>deprecated per-module log instance.</p>
+<p>You should instantiate your own logger instead.</p>
+  </div>
+
+</div>
 
 
 
