@@ -293,47 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/a-simple-bot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    A simple bot - example
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/creating-custom-parsers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Creating custom parsers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/getting-started/" class="md-nav__link">
+      <a href="../../guides/001-getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,11 +313,51 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/sending-attachments/" class="md-nav__link">
+      <a href="../../guides/002-a-simple-bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A simple bot - example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/003-sending-attachments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Sending attachments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/004-creating-custom-parsers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating custom parsers
   </span>
   
 
@@ -555,6 +555,13 @@
           <li class="md-nav__item">
   <a href="#niobot.client.NioBot.mount_module" class="md-nav__link">
     mount_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.unmount_module" class="md-nav__link">
+    unmount_module()
   </a>
   
 </li>
@@ -1053,6 +1060,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#niobot.client.NioBot.unmount_module" class="md-nav__link">
+    unmount_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#niobot.client.NioBot.get_command" class="md-nav__link">
     get_command()
   </a>
@@ -1344,7 +1358,7 @@
         <tr>
           <td><code>global_message_type</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#module-typing">typing</a>.<a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;m.text&#39;, &#39;m.notice&#39;]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1423,6 +1437,20 @@
           </td>
           <td>
                 <code>1000</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ignore_self</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to ignore messages sent by the bot itself. Defaults to False. Useful for self-bots.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
           </td>
         </tr>
     </tbody>
@@ -1963,6 +1991,58 @@ populated), but the event loop will be running.</p>
             <div class="doc-md-description">
               <p>There was an error registering a command (e.g. name conflict)</p>
             </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="niobot.client.NioBot.unmount_module" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">unmount_module</span>
+
+
+<a href="#niobot.client.NioBot.unmount_module" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">unmount_module</span><span class="p">(</span><span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Does the opposite of mounting the module.
+This will remove any commands that have been added to the bot from the given module.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>module</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="niobot.commands.Module" href="../commands/#niobot.commands.Module">Module</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The module to unmount</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>

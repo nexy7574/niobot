@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../003-sending-attachments/">
       
       
-        <link rel="next" href="../creating-custom-parsers/">
+        <link rel="next" href="../../reference/attachment/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>A simple bot - example - Nio-Bot Docs</title>
+        <title>Creating custom parsers - Nio-Bot Docs</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-simple-bot-example" class="md-skip">
+        <a href="#creating-custom-parsers" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              A simple bot - example
+              Creating custom parsers
             
           </span>
         </div>
@@ -293,59 +293,9 @@
                 
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    A simple bot - example
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="../creating-custom-parsers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Creating custom parsers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../001-getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,7 +315,27 @@
   
   
     <li class="md-nav__item">
-      <a href="../sending-attachments/" class="md-nav__link">
+      <a href="../002-a-simple-bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A simple bot - example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003-sending-attachments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -374,6 +344,106 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating custom parsers
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Creating custom parsers
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-parser" class="md-nav__link">
+    Creating a parser
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a parser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-if-i-need-to-await-in-my-parser" class="md-nav__link">
+    What if I need to await in my parser?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-the-difference-between-parser-and-statelessparser" class="md-nav__link">
+    What's the difference between Parser and StatelessParser?
+  </a>
+  
+    <nav class="md-nav" aria-label="What's the difference between Parser and StatelessParser?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-should-i-choose" class="md-nav__link">
+    Which should I choose?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -729,6 +799,54 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-parser" class="md-nav__link">
+    Creating a parser
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a parser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-if-i-need-to-await-in-my-parser" class="md-nav__link">
+    What if I need to await in my parser?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-the-difference-between-parser-and-statelessparser" class="md-nav__link">
+    What's the difference between Parser and StatelessParser?
+  </a>
+  
+    <nav class="md-nav" aria-label="What's the difference between Parser and StatelessParser?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-should-i-choose" class="md-nav__link">
+    Which should I choose?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -742,7 +860,7 @@
                   
 
   
-    <a href="https://github.com/nexy7574/niobot/edit/master/docs/guides/a-simple-bot.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/nexy7574/niobot/edit/master/docs/guides/004-creating-custom-parsers.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -750,92 +868,104 @@
   
 
 
-<h1 id="a-simple-bot-example">A simple bot - example<a class="headerlink" href="#a-simple-bot-example" title="Permanent link">&para;</a></h1>
-<p>Let's take the following code and break it down, so that you can better understand how niobot works:</p>
-<details class="example">
-<summary>Example</summary>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">niobot</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">bot</span> <span class="o">=</span> <span class="n">niobot</span><span class="o">.</span><span class="n">NioBot</span><span class="p">(</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">homeserver</span><span class="o">=</span><span class="s2">&quot;https://matrix.org&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;@my_username:matrix.org&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">device_id</span><span class="o">=</span><span class="s2">&quot;my_device_name&quot;</span><span class="p">,</span>  <span class="c1"># defaults to the easily recognisable &#39;nio-bot&#39;.</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">store_path</span><span class="o">=</span><span class="s2">&quot;./store&quot;</span><span class="p">,</span>  <span class="c1"># See the &#39;What is the store?&#39; section for more info.</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">command_prefix</span><span class="o">=</span><span class="s2">&quot;!&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">case_insensitive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># means `!PING` and `!piNG` will both work and run `!ping`.</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">owner_id</span><span class="o">=</span><span class="s2">&quot;@owner:matrix.org&quot;</span><span class="p">,</span>  <span class="c1"># The user ID who owns this bot. Optional, but required for bot.is_owner(...).#</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="c1"># Here, you can pass extra options that you would usually pass to `nio.AsyncClient`. Lets pass a proxy:</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">proxy</span><span class="o">=</span><span class="s2">&quot;socks5://username:password@host:port&quot;</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">)</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># Now, we want to register a command. NioBot uses the decorator `@NioBot.command()` for this.</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># This decorator takes a few arguments, but the only one you&#39;ll use most of the time is `name`.</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># There are also other arguments though.</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># For now we&#39;ll register a simple `ping` command.</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ping&quot;</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># We now need to define the function</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">niobot</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Shows the latency between events&quot;&quot;&quot;</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="c1"># So a few things have happened here:</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="c1"># `async def` makes this command asynchronous. This means that it can `await` other things.</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="c1"># `ctx` is the only argument this command takes. By default, all niobot commands must take at least one argument,</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="c1"># which is the command&#39;s context.</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="c1"># We also then typehinted it with `niobot.Context`. This isn&#39;t critical to make the bot run, however if you&#39;re using</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="c1"># an IDE like PyCharm, or just a workspace editor with intellisense like Visual Studio Code, it will help you</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="c1"># to see what attributes and functions `niobot.Context` has without needing to check the documentation.</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="c1"># Anyway, lets write the command itself.</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="c1"># First, we need to measure the latency. NioBot has a handy function for this:</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="n">latency_ms</span> <span class="o">=</span> <span class="n">bot</span><span class="o">.</span><span class="n">latency</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="c1"># `bot.latency` measures the latency between when the event was dispatched by the server, and when the bot</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="c1"># received it. It then returns the latency in milliseconds.</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="c1"># `Context.message` is the event that triggered this command.</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="c1"># Now, we need to reply to the user.</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="s2">&quot;Pong! Latency: </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">latency_ms</span><span class="p">))</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="c1"># And that&#39;s it! We&#39;ve written our first command.</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="c1"># `Context.respond` always sends a reply to the user who sent the command.</span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="c1"># To send a message without a reply, you can use `NioBot.send_message`.</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="c1"># And while we&#39;re at it, we can add an event listener.</span>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="c1"># For this example, we&#39;ll add an event listener that tells the user if there&#39;s a command error.</span>
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;command_error&quot;</span><span class="p">)</span>
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">on_command_error</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">niobot</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">):</span>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Called when a command raises an exception&quot;&quot;&quot;</span>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="c1"># Take a look at the event reference for more information about events.</span>
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="c1"># Now, we can send a message to the user.</span>
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="s2">&quot;Error: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
-</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="c1"># And while we&#39;re at it, we&#39;ll log when a user runs a command.</span>
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;command&quot;</span><span class="p">)</span>
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">on_command</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User </span><span class="si">{}</span><span class="s2"> ran command </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">sender</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
-</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>
-</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="c1"># Now, we need to start our bot.</span>
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="c1"># This is done by calling `NioBot.run()`.</span>
-</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="c1"># In this example, we&#39;ll use an access token, rather than an insecure password.</span>
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="c1"># You can get an access token through the niobot CLI:</span>
-</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="c1"># $ niocli get-access-token</span>
-</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="c1"># Copy the resulting access token, and then you can put it here:</span>
-</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">access_token</span><span class="o">=</span><span class="s2">&quot;my_access_token&quot;</span><span class="p">)</span>
-</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="c1"># Bear in mind that no code will run after `bot.run`. This function will block until the bot is stopped.</span>
-</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="c1"># And even when the bot is stopped, its usually with an exception, so code after `bot.run` is not guaranteed to run.</span>
+<h1 id="creating-custom-parsers">Creating custom parsers<a class="headerlink" href="#creating-custom-parsers" title="Permanent link">&para;</a></h1>
+<p>NioBot is loaded with some sane defaults for basic types. If you were to pass the following function as a command:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">my_command</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">arg1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">arg2</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">arg3</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="o">...</span>
 </span></code></pre></div>
-</details>
+NioBot would intelligently detect <code>ctx</code> as the context (and realise it's not intended to be something the user provides)
+and <code>arg1</code> as an integer, <code>arg2</code> as a float, and <code>arg3</code> as a string.
+Then, when my_command is run, the first argument would be converted to an integer from the message, the second as a 
+float, and so on.</p>
+<p>However, these built-in types only go so far - they're limited to a subset of python built-in types, and a couple
+matrix-specific things (i.e. rooms and events and matrix.to links).</p>
+<div class="admonition question">
+<p class="admonition-title">This looks worryingly complicated</p>
+<p>Pre <code>1.1.0b1</code>, parsers were far too flexible and inconsistent. The old structure only required you had a singular
+synchronous function that took three arguments: <code>ctx</code>, <code>arg</code>, and <code>user_input</code>.</p>
+<p>This was a problem for a couple reasons:</p>
+<ol>
+<li>The flexibility meant that it was difficult to get a uniform experience across all parsers.</li>
+<li>This was still not very flexible for customising the parsers, and often required wrappers.</li>
+</ol>
+<p>However, since 1.1.0b1, the parser structure now uses two new ABC classes, <code>Parser</code> and <code>StatelessParser</code>, to ensure
+that all parsers are consistent and easy to use, while still being flexible and configurable.
+As a result of using classes though, some parsers can still feel a little bit bulky. But that's okay!</p>
+</div>
+<h2 id="creating-a-parser">Creating a parser<a class="headerlink" href="#creating-a-parser" title="Permanent link">&para;</a></h2>
+<p>Creating a parser is actually really easy. All the library needs from you is a class that subclasses either of the
+parser ABCs (see below), and implements the <code>__call__</code> dunder method!</p>
+<p>For example:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">niobot.utils.parsers</span> <span class="kn">import</span> <span class="n">StatelessParser</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">niobot</span> <span class="kn">import</span> <span class="n">CommandParserError</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span> <span class="nc">UserParser</span><span class="p">(</span><span class="n">StatelessParser</span><span class="p">):</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">arg</span><span class="p">:</span> <span class="n">Argument</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="c1"># Do some stuff here</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">if</span> <span class="s2">&quot;@&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="c1"># Always raise CommandParserError when its an invalid value - this allows for proper error handling.</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="k">raise</span> <span class="n">CommandParserError</span><span class="p">(</span><span class="s2">&quot;Invalid user ID. Expected @user:example.com&quot;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="k">return</span> <span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Remove the @ from the user ID</span>
+</span></code></pre></div></p>
+<p>You can then use this parser in your commands like so:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">niobot</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">typing</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">my_parsers</span> <span class="kn">import</span> <span class="n">UserParser</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">bot</span> <span class="o">=</span> <span class="n">niobot</span><span class="o">.</span><span class="n">NioBot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nd">@bot</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">my_command</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">niobot</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">UserParser</span><span class="p">]):</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="c1"># typing.Annotated[real_type, parser] is a special type that allows you to specify a parser for a type.</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="c1"># In your linter, `user` will be `str`, not `UserParser`.</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="s2">&quot;User ID: </span><span class="si">{!s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="what-if-i-need-to-await-in-my-parser">What if I need to <code>await</code> in my parser?<a class="headerlink" href="#what-if-i-need-to-await-in-my-parser" title="Permanent link">&para;</a></h3>
+<p>If you need to use asynchronous functions in your parser, you can simply return the coroutine in __call__, like below:</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">MyParser</span><span class="p">(</span><span class="n">Parser</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">internal_caller</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">arg</span><span class="p">:</span> <span class="n">Argument</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="c1"># Do some stuff here</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># or whatever async function you need to call</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="k">return</span> <span class="n">value</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">internal_caller</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># this returns a coroutine.</span>
+</span></code></pre></div>
+By returning the unawaited coroutine, the library will intelligently detect it needs to be awaited, and will do so.</p>
+<p>If you want to use a parser like this in your code manually, you can always use <a class="autorefs autorefs-internal" href="../../reference/utils/unblock/#niobot.utils.unblocking.force_await">niobot.utils.force_await</a>, which will
+await a coroutine if it needs awaiting, or simply returns the input if it's not a coroutine.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">niobot.utils</span> <span class="kn">import</span> <span class="n">force_await</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">coro</span> <span class="o">=</span> <span class="n">MyParser</span><span class="p">()(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># If you&#39;re not sure if coro is a coroutine or not, you can use force_await</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">parsed</span> <span class="o">=</span> <span class="k">await</span> <span class="n">force_await</span><span class="p">()</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Otherwise, simply await the result</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">coro</span> <span class="o">=</span> <span class="k">await</span> <span class="n">MyParser</span><span class="p">()(</span><span class="o">...</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="whats-the-difference-between-parser-and-statelessparser">What's the difference between Parser and StatelessParser?<a class="headerlink" href="#whats-the-difference-between-parser-and-statelessparser" title="Permanent link">&para;</a></h2>
+<p>Great question!</p>
+<p>With parsers, there's often a split between complicated/customisable, and fixed parsers. For example, 
+<a href="#niobot.utils.parsers.IntegerParser">IntegerParser</a> is a customisable parser - You can pass options to it while
+initialising it, and it will use those options to parse the input. However, on the contrary,
+<a href="#niobot.utils.parsers.BooleanParser">BooleanParser</a> is a fixed parser - it does not take any options, and will always
+convert the input to a boolean.</p>
+<p>Basically, <code>StatelessParser</code> never needs to access <code>self</code> while parsing. <code>Parser</code> <em>can</em>.</p>
+<h3 id="which-should-i-choose">Which should I choose?<a class="headerlink" href="#which-should-i-choose" title="Permanent link">&para;</a></h3>
+<p>If you're writing a parser that needs to be customisable and takes options, then you should use <code>Parser</code>. Otherwise,
+if you don't need <code>self</code>, then you should use <code>StatelessParser</code>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 19, 2023 12:16:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 16, 2023 18:39:22</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 19, 2023 12:16:03</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 9, 2023 20:31:51</span>
       
     
   </small>
@@ -863,7 +993,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Index" rel="prev">
+          <a href="../003-sending-attachments/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sending attachments" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -873,20 +1003,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Sending attachments
               </div>
             </div>
           </a>
         
         
           
-          <a href="../creating-custom-parsers/" class="md-footer__link md-footer__link--next" aria-label="Next: Creating custom parsers" rel="next">
+          <a href="../../reference/attachment/" class="md-footer__link md-footer__link--next" aria-label="Next: Attachments" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Creating custom parsers
+                Attachments
               </div>
             </div>
             <div class="md-footer__button md-icon">
