@@ -660,124 +660,6 @@ class BaseAttachment(abc.ABC):
         return self
 
 
-class SupportXYZAmorganBlurHash(BaseAttachment):
-    """
-    Represents an attachment that supports blurhashes.
-
-    :param xyz_amorgan_blurhash: The blurhash of the attachment
-    :ivar xyz_amorgan_blurhash: The blurhash of the attachment
-    """
-
-    if typing.TYPE_CHECKING:
-        xyz_amorgan_blurhash: str
-
-    def __init__(self, *args, xyz_amorgan_blurhash: typing.Optional[str] = None, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.xyz_amorgan_blurhash = xyz_amorgan_blurhash
-
-    @classmethod
-    async def from_file(
-        cls,
-        file: U[str, io.BytesIO, pathlib.Path],
-        file_name: typing.Optional[str] = None,
-        xyz_amorgan_blurhash: typing.Optional[U[str, bool]] = None,
-    ) -> "SupportXYZAmorganBlurHash":
-        file = _to_path(file)
-        if isinstance(file, io.BytesIO):
-            if not file_name:
-                raise ValueError("file_name must be specified when uploading a BytesIO object.")
-        else:
-            if not file_name:
-                file_name = file.name
-
-        mime_type = await run_blocking(detect_mime_type, file)
-        size = _size(file)
-        self = cls(file, file_name, mime_type, size, xyz_amorgan_blurhash=xyz_amorgan_blurhash)
-        if xyz_amorgan_blurhash is not False:
-            await self.get_blurhash()
-        return self
-
-    @staticmethod
-    def thumbnailify_image(
-        image: U[PIL.Image.Image, io.BytesIO, str, pathlib.Path],
-        size: typing.Tuple[int, int] = (320, 240),
-        resampling: PIL.Image.Resampling = PIL.Image.Resampling.BICUBIC,
-    ) -> PIL.Image.Image:
-        """
-        Helper function to thumbnail an image.
-
-        This function is blocking - you should use [niobot.utils.run_blocking][] to run it.
-
-        :param image: The image to thumbnail
-        :param size: The size to thumbnail to. Defaults to 320x240, a standard thumbnail size.
-        :param resampling: The resampling filter to use. Defaults to `PIL.Image.BICUBIC`, a high-quality but
-        fast resampling method. For the highest quality, use `PIL.Image.LANCZOS`.
-        :return: The thumbnail
-        """
-        if not isinstance(image, PIL.Image.Image):
-            image = _to_path(image)
-            image = PIL.Image.open(image)
-        image.thumbnail(size, resampling)
-        return image
-
-    async def get_blurhash(
-        self,
-        quality: typing.Tuple[int, int] = (4, 3),
-        file: typing.Optional[U[str, pathlib.Path, io.BytesIO, PIL.Image.Image]] = None,
-        disable_auto_crop: bool = False
-    ) -> str:
-        """
-        Gets the blurhash of the attachment. See: [woltapp/blurhash](https://github.com/woltapp/blurhash)
-
-        !!! tip "You should crop-down your blurhash images."
-            Generating blurhashes can take a long time, *especially* on large images.
-            You should crop-down your images to a reasonable size before generating the blurhash.
-
-            Remember, most image quality is lost - there's very little point in generating a blurhash for a 4K image.
-            Anything over 800x600 is definitely overkill.
-
-            You can easily resize images with
-            [SupportXYZAmorganBlurHash.thumbnailify_image][niobot.attachment.SupportXYZAmorganBlurHash.thumbnailify_image]:
-
-            ```python
-            attachment = await niobot.ImageAttachment.from_file(my_image, generate_blurhash=False)
-            await attachment.get_blurhash(file=attachment.thumbnailify_image(attachment.file))
-            ```
-
-            This will generate a roughly 320x240 thumbnail image, and generate the blurhash from that.
-
-            !!! tip "New!"
-                Unless you pass `disable_auto_crop=True`, this function will automatically crop the image down to
-                a reasonable size, before generating a blurhash.
-
-
-        :param quality: A tuple of the quality to generate the blurhash at. Defaults to (4, 3).
-        :param file: The file to generate the blurhash from. Defaults to the file passed in the constructor.
-        :param disable_auto_crop: Whether to disable automatic cropping of the image. Defaults to False.
-        :return: The blurhash
-        """
-        if isinstance(self.xyz_amorgan_blurhash, str):
-            return self.xyz_amorgan_blurhash
-
-        file = file or self.file
-        if not isinstance(file, PIL.Image.Image):
-            file = _to_path(file)
-            file = PIL.Image.open(file)
-
-        if disable_auto_crop is False and (file.width > 800 or file.height > 600):
-            log.debug("Cropping image down from {0.width}x{0.height} to 800x600 for faster blurhashing".format(file))
-            file.thumbnail((800, 600), PIL.Image.BICUBIC)
-        x = await run_blocking(generate_blur_hash, file or self.file, *quality)
-        self.xyz_amorgan_blurhash = x
-        return x
-
-    def as_body(self, body: typing.Optional[str] = None) -> dict:
-        output_body = super().as_body(body)
-        if isinstance(self.xyz_amorgan_blurhash, str):
-            output_body["info"]["xyz.amorgan.blurhash"] = self.xyz_amorgan_blurhash
-        return output_body
-
-
 class FileAttachment(BaseAttachment):
     """
     Represents a generic file attachment.
@@ -803,7 +685,7 @@ class FileAttachment(BaseAttachment):
         super().__init__(file, file_name, mime_type, size_bytes, attachment_type=AttachmentType.FILE)
 
 
-class ImageAttachment(SupportXYZAmorganBlurHash):
+class ImageAttachment(BaseAttachment):
     """
     Represents an image attachment.
 
@@ -836,7 +718,6 @@ class ImageAttachment(SupportXYZAmorganBlurHash):
             file_name,
             mime_type,
             size_bytes,
-            xyz_amorgan_blurhash=xyz_amorgan_blurhash,
             attachment_type=AttachmentType.IMAGE,
         )
         self.info = {
@@ -846,6 +727,7 @@ class ImageAttachment(SupportXYZAmorganBlurHash):
             "size": size_bytes,
         }
         self.thumbnail = thumbnail
+        self.blurhash = xyz_amorgan_blurhash
 
     @property
     def height(self) -> typing.Optional[int]:
@@ -920,6 +802,82 @@ class ImageAttachment(SupportXYZAmorganBlurHash):
             await self.get_blurhash()
         return self
 
+    @staticmethod
+    @deprecated("ImageAttachment.generate_thumbnail", "1.2.0")
+    def thumbnailify_image(*args):
+        return ImageAttachment.generate_thumbnail(*args)
+
+    @staticmethod
+    def generate_thumbnail(
+        image: U[PIL.Image.Image, io.BytesIO, str, pathlib.Path],
+        size: typing.Tuple[int, int] = (320, 240),
+        resampling: PIL.Image.Resampling = PIL.Image.Resampling.BICUBIC,
+    ) -> PIL.Image.Image:
+        """
+        Helper function to thumbnail an image.
+
+        This function is blocking - you should use [niobot.utils.run_blocking][] to run it.
+
+        :param image: The image to thumbnail
+        :param size: The size to thumbnail to. Defaults to 320x240, a standard thumbnail size.
+        :param resampling: The resampling filter to use. Defaults to `PIL.Image.BICUBIC`, a high-quality but
+        fast resampling method. For the highest quality, use `PIL.Image.LANCZOS`.
+        :return: The thumbnail
+        """
+        if not isinstance(image, PIL.Image.Image):
+            image = _to_path(image)
+            image = PIL.Image.open(image)
+        image.thumbnail(size, resampling)
+        return image
+
+    async def get_blurhash(
+        self,
+        quality: typing.Tuple[int, int] = (4, 3),
+        file: typing.Optional[U[str, pathlib.Path, io.BytesIO, PIL.Image.Image]] = None,
+        disable_auto_crop: bool = False
+    ) -> str:
+        """
+        Gets the blurhash of the attachment. See: [woltapp/blurhash](https://github.com/woltapp/blurhash)
+
+        !!! tip "You should crop-down your blurhash images."
+            Generating blurhashes can take a long time, *especially* on large images.
+            You should crop-down your images to a reasonable size before generating the blurhash.
+
+            Remember, most image quality is lost - there's very little point in generating a blurhash for a 4K image.
+            Anything over 800x600 is definitely overkill.
+
+            ```python
+            attachment = await niobot.ImageAttachment.from_file(my_image, generate_blurhash=False)
+            await attachment.get_blurhash(file=attachment.thumbnailify_image(attachment.file))
+            ```
+
+            This will generate a roughly 320x240 thumbnail image, and generate the blurhash from that.
+
+        !!! tip "New!"
+            Unless you pass `disable_auto_crop=True`, this function will automatically crop the image down to
+            a reasonable size, before generating a blurhash.
+
+
+        :param quality: A tuple of the quality to generate the blurhash at. Defaults to (4, 3).
+        :param file: The file to generate the blurhash from. Defaults to the file passed in the constructor.
+        :param disable_auto_crop: Whether to disable automatic cropping of the image. Defaults to False.
+        :return: The blurhash
+        """
+        if isinstance(self.blurhash, str):
+            return self.blurhash
+
+        file = file or self.file
+        if not isinstance(file, PIL.Image.Image):
+            file = _to_path(file)
+            file = PIL.Image.open(file)
+
+        if disable_auto_crop is False and (file.width > 800 or file.height > 600):
+            log.debug("Cropping image down from {0.width}x{0.height} to 800x600 for faster blurhashing".format(file))
+            file.thumbnail((800, 600), PIL.Image.BICUBIC)
+        x = await run_blocking(generate_blur_hash, file or self.file, *quality)
+        self.blurhash = x
+        return x
+
     def as_body(self, body: typing.Optional[str] = None) -> dict:
         output_body = super().as_body(body)
         output_body["info"] = {**output_body["info"], **self.info}
@@ -928,6 +886,9 @@ class ImageAttachment(SupportXYZAmorganBlurHash):
                 output_body["info"]["thumbnail_file"] = self.thumbnail.keys
             output_body["info"]["thumbnail_info"] = self.thumbnail.info
             output_body["info"]["thumbnail_url"] = self.thumbnail.url
+
+        if self.blurhash:
+            output_body["info"]["xyz.amorgan.blurhash"] = self.blurhash
         return output_body
 
 
