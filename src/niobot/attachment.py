@@ -31,7 +31,7 @@ from .exceptions import (
     MediaUploadException,
     MetadataDetectionException,
 )
-from .utils import run_blocking
+from .utils import run_blocking, deprecated
 
 if typing.TYPE_CHECKING:
     from .client import NioBot
@@ -523,6 +523,7 @@ class BaseAttachment(abc.ABC):
         return cls(file, file_name, mime_type, size)
 
     @classmethod
+    @deprecated("from_file", "1.2.0")
     async def from_mxc(
         cls, client: "NioBot", url: str, *, force_write: U[bool, pathlib.Path] = False
     ) -> "BaseAttachment":
@@ -568,6 +569,8 @@ class BaseAttachment(abc.ABC):
     ) -> U[int, float]:
         """
         Helper function to convert the size of this attachment into a different unit.
+
+        *Don't forget, Xib is binary (1024), Xb is decimal (1000), so 1kiB is 1024 bytes, and 1kb is 1000 bytes*
 
         ??? example "Example"
             ```python
