@@ -39,6 +39,7 @@ __all__ = (
     "MatrixMXCUrl",
     "MatrixToParser",
     "MXCParser",
+    "MatrixUserParser",
     # And the deprecated aliases
     "boolean_parser",
     "float_parser",
@@ -216,7 +217,7 @@ class RoomParser(StatelessParser):
     """
 
     @staticmethod
-    async def internal(ctx: "Context", value: str) -> nio.MatrixRoom:
+    async def internal(ctx: "Context", _arg, value: str) -> nio.MatrixRoom:
         if value.startswith("!"):
             # Room ID
             room = ctx.client.rooms.get(value)
@@ -248,7 +249,7 @@ class RoomParser(StatelessParser):
         return room
 
     def __call__(self, ctx, arg, value: str) -> typing.Coroutine[typing.Any, typing.Any, nio.MatrixRoom]:
-        return self.internal(ctx, value)
+        return self.internal(ctx, arg, value)
 
 
 class EventParser(Parser):
@@ -263,7 +264,7 @@ class EventParser(Parser):
     def __init__(self, event_type: typing.Optional[str] = None):
         self.event_type = event_type
 
-    async def internal(self, ctx: "Context", value: str) -> nio.Event:
+    async def internal(self, ctx: "Context", _arg, value: str) -> nio.Event:
         room_id = ctx.room.room_id
         if m := MATRIX_TO_REGEX.match(value):
             # matrix.to link
@@ -324,7 +325,7 @@ class MatrixDotToParser(Parser):
         self.allow_user_as_room = allow_user_as_room
         self.stateless = stateless
 
-    async def internal(self, ctx: "Context", value: str) -> MatrixToLink:
+    async def internal(self, ctx: "Context", _arg, value: str) -> MatrixToLink:
         if not (m := MATRIX_TO_REGEX.match(value)):
             raise CommandParserError(f"Invalid matrix.to link: {value!r}.")
 
@@ -372,7 +373,7 @@ class MatrixDotToParser(Parser):
     def __call__(
         self, ctx: "Context", arg: "Argument", value: str
     ) -> typing.Coroutine[typing.Any, typing.Any, MatrixToLink]:
-        return self.internal(ctx, value)
+        return self.internal(ctx, arg, value)
 
 
 MatrixToParser = MatrixDotToParser
